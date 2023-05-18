@@ -2,6 +2,7 @@ package Control;
 
 import java.io.*;
 import java.util.*;
+import Model.Word;
 
 public class txtManager {
     public static void saveWords(ArrayList<Word> word) throws IOException {
@@ -9,7 +10,7 @@ public class txtManager {
         int i=0;
         String file="";
 
-        while(word.size() && i<50) {
+        while(i<word.size() && i<50) {
             file += word.get(i).getWord() + " " + word.get(i).getValue();
 
             if(i!=49) file += "\n";
@@ -35,13 +36,13 @@ public class txtManager {
         File file=new File(fileName);
         Scanner sc=new Scanner(file);
 
-        ArrayList<Word> word=new ArrayList<Word><String,Integer>(50);
+        ArrayList<Word> word=new ArrayList<Word>(50);
         try {
             int i=0;
 
             while (sc.hasNext() && i<50) {
 
-                word.add(sc.next(), sc.nextInt());
+                word.add(new Word(sc.next(), sc.nextInt()));
                 i++;
             }
         }
