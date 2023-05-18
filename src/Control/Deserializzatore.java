@@ -28,7 +28,7 @@ public class Deserializzatore {
         return art;
     }
 
-    public ArrayList<Article> deserializeCSV(String fileName) throws IOException, ClassNotFoundException {
+    public ArrayList<Article> deserializeCSV() throws IOException, ClassNotFoundException {
         ArrayList<Article> art=new ArrayList<Article>(1000);
 
         ArrayList<Article> beans = (ArrayList<Article>) new CsvToBeanBuilder(new FileReader(fileName))
