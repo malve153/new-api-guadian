@@ -29,16 +29,12 @@ public class Deserializzatore {
     }
 
     public ArrayList<Article> deserializeCSV() throws IOException, ClassNotFoundException {
-        ArrayList<Article> art=new ArrayList<Article>(1000);
 
         ArrayList<Article> beans = (ArrayList<Article>) new CsvToBeanBuilder(new FileReader(fileName))
                 .withType(Article.class)
                 .build()
                 .parse();
 
-        beans.forEach(System.out::println);
-
-
-        return art;
+        return beans;
     }
 }
