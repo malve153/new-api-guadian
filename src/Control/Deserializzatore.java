@@ -1,6 +1,9 @@
 package Control;
 
 import Model.Article;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.opencsv.bean.CsvToBeanBuilder;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -18,7 +21,7 @@ public class Deserializzatore {
         ArrayList<Article> art=new ArrayList<Article>(1000);
         ObjectMapper objectMapper = new ObjectMapper();
 
-        art = objectMapper.readValue(new File(fileName), new TypeReference <ArrayList<Article>>(){});
+        art = objectMapper.readValue(new File(fileName), new TypeReference<ArrayList<Article>>(){});
 
 
 

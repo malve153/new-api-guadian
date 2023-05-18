@@ -3,7 +3,7 @@ package Model;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.opencsv.bean.CsvBindByPosition;
 import com.opencsv.bean.CsvRecurse;
-
+import Model.Field;
 import java.io.Serializable;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
