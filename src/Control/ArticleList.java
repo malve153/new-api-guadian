@@ -22,7 +22,7 @@ public class ArticleList {
         boolean alreadyfound;
 
         for (int i = 0; i < articles.length; i++) {
-            fullText = articles[i].getWebTitle() + articles[i].getFields().getBodyText();
+            fullText = articles[i].getWebTitle() + " " + articles[i].getFields().getBodyText();
             st = new StringTokenizer(fullText);
             keyCopy = "";
 
