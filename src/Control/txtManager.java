@@ -1,17 +1,26 @@
 package Control;
 
 import java.io.*;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
 import java.util.*;
 import Model.Word;
 
-public class txtManager {
-    public static void saveWords(ArrayList<Word> word) throws IOException {
+public class txtManager <T>{
+
+    private String fileName;
+    private static final int numeroParole=50;
+
+    public txtManager(String fileName){
+        this.fileName=fileName;
+    }
+    public void saveWords(ArrayList<T> word) throws IOException {
 
         int i=0;
         String file="";
 
         while(i<word.size() && i<50) {
-            file += word.get(i).getWord() + " " + word.get(i).getValue();
+            file += word.get(i)/*.getWord() + " " + word.get(i).getValue()*/;
 
             if(i!=49) file += "\n";
             i++;
@@ -31,24 +40,21 @@ public class txtManager {
 
 
     }
-    public static ArrayList<Word> readWords(String fileName) throws FileNotFoundException {
 
+    public ArrayList<T> readFile(Class c) throws ClassNotFoundException, FileNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
         File file=new File(fileName);
         Scanner sc=new Scanner(file);
 
-        ArrayList<Word> word=new ArrayList<Word>(50);
-        try {
-            int i=0;
+        ArrayList<T> word=new ArrayList<T>(numeroParole);
 
-            while (sc.hasNext() && i<50) {
+        while (sc.hasNext()) {
 
-                word.add(new Word(sc.next(), sc.nextInt()));
-                i++;
-            }
+            T obj= (T) Class.forName(c.getName()).getConstructor(String.class).newInstance(sc.nextLine());
+
+            word.add(obj);
         }
-        catch (InputMismatchException e){
-            e.printStackTrace();
-        }
+
+        sc.close();
 
         return word;
     }

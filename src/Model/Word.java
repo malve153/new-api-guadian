@@ -19,6 +19,11 @@ public class Word implements Comparator<Word> {
         this.value=value;
     }
 
+    @Override
+    public String toString() {
+        return getWord()+" "+getValue();
+    }
+
     public String getWord() {
         return w;
     }

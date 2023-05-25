@@ -23,7 +23,6 @@ public class GuardianContentApi {
 
       public <T> T readValue(String value, Class<T> valueType) {
         try {
-          System.out.println(" cass"+valueType);
           return jacksonObjectMapper.readValue(value, valueType);
         } catch (IOException e) {
           throw new RuntimeException(e);
@@ -45,7 +44,6 @@ public class GuardianContentApi {
   private final String apiKey;
   private String section;
   private String tag;
-  private String bodyText;
   private Date toDate;
   private Date fromDate;
 
@@ -104,7 +102,7 @@ public class GuardianContentApi {
     }
     request.queryString("api-key", apiKey);
 
-    System.out.println(request.getUrl());
+//    System.out.println(request.getUrl());
 
     HttpResponse<ResponseWrapper> response = request.asObject(ResponseWrapper.class);
 

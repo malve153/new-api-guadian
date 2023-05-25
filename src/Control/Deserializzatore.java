@@ -18,6 +18,15 @@ public class Deserializzatore {
     }
 
     public ArrayList<Article> deserialize() throws IOException, ClassNotFoundException {
+        if(fileName.substring(fileName.length()-3).compareTo("csv")==0){
+            return deserializeCSV();
+        }
+        else{
+            return deserializeTxt();
+        }
+    }
+
+    public ArrayList<Article> deserializeTxt() throws IOException, ClassNotFoundException {
         ArrayList<Article> art=new ArrayList<Article>(1000);
         ObjectMapper objectMapper = new ObjectMapper();
 
