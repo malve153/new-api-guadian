@@ -4,8 +4,6 @@ import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.*;
-import com.formdev.flatlaf.FlatDarkLaf;
-import com.formdev.flatlaf.FlatLightLaf;
 
 import javax.swing.border.EmptyBorder;
 import java.awt.FlowLayout;
@@ -19,25 +17,26 @@ public class Frame extends JFrame {
 	private InitialPanel initialPane;
 	private Panel contentPane;
 	private WordsPanel wordsPane;
+	private LoadPanel loadPane;
 
 	/**
 	 * Create the frame.
 	 */
 	public Frame() {
-		try {
+		/*try {
 			UIManager.setLookAndFeel( new FlatLightLaf() );
 		} catch( Exception ex ) {
 			System.err.println( "Failed to initialize LaF" );
-		}
-
-		setTitle("The Guadian Articles");
+		}*/
+		this.setTitle("The Guardian Articles");
 
 		this.setBounds(100, 100, 600, 320);
+		this.setResizable(false);
 
 		initialPane = new InitialPanel();
 		this.setContentPane(initialPane);
 
-		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 		this.setVisible(true);
 	}
 
@@ -52,6 +51,8 @@ public class Frame extends JFrame {
 	public WordsPanel getWordsPanel() {
 		return wordsPane;
 	}
+
+	public LoadPanel getLoadPanel() { return loadPane; }
 
 	public void changeInitialPanel() {
 		this.remove(initialPane);
@@ -75,6 +76,30 @@ public class Frame extends JFrame {
 
 	public void changeWordsPanel() {
 		this.remove(wordsPane);
+		this.invalidate();
+		this.setContentPane(contentPane);
+		this.setResizable(true);
+		this.revalidate();
+	}
+
+	public void changePanelToLoadPanel() {
+		this.remove(contentPane);
+		this.invalidate();
+		this.setContentPane(loadPane);
+		this.setResizable(true);
+		this.revalidate();
+	}
+
+	public void changeLoadPanelToWordsPanel() {
+		this.remove(loadPane);
+		this.invalidate();
+		this.setContentPane(wordsPane);
+		this.setResizable(true);
+		this.revalidate();
+	}
+
+	public void changeLoadPanelToPanel() {
+		this.remove(loadPane);
 		this.invalidate();
 		this.setContentPane(contentPane);
 		this.setResizable(true);

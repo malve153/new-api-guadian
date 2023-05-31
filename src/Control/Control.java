@@ -32,7 +32,7 @@ public class Control implements WindowListener, ActionListener {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	/*public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -42,7 +42,7 @@ public class Control implements WindowListener, ActionListener {
 				}
 			}
 		});
-	}
+	}*/
 
 	public Control() {
 		frame = new Frame();
@@ -58,8 +58,7 @@ public class Control implements WindowListener, ActionListener {
 
 	@Override
 	public void windowClosing(WindowEvent e) {
-		// TODO Auto-generated method stub
-		JOptionPane.showConfirmDialog(frame, "Sicuro di voler uscire?", "Uscita", JOptionPane.YES_NO_OPTION);
+		uscita();
 	}
 
 	@Override
@@ -221,15 +220,23 @@ public class Control implements WindowListener, ActionListener {
 		frame.changePanel();
 		frame.getWordsPanel().getBtnIndietro().addActionListener(this);
 
-		String value="";
+		frame.getWordsPanel().getTable().setModel(frame.getWordsPanel().setTable(words));
+		frame.getWordsPanel().setTable();
+
+		/*String value="";
 		for (Word w:words) {
 			value+=w+"\n";
 		}
 
-		frame.getWordsPanel().setTextArea(value);
+		frame.getWordsPanel().setTextArea(value);*/
 
 	}
 
+	private void uscita() {
 
+		int u = JOptionPane.showConfirmDialog(frame, "Sicuro di voler uscire?", "Uscita", JOptionPane.YES_NO_OPTION);
+
+		if(u == JOptionPane.OK_OPTION) System.exit(0);
+	}
 
 }
