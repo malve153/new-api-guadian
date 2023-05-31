@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a27e7b7-091f-4fc4-9e36-f9fca2104db4" name="Changes" comment="codice per scaricare 1000 articoli per argomento, messaggio di errore se non viene scaricato nessun articolo">
+    <list default="true" id="1a27e7b7-091f-4fc4-9e36-f9fca2104db4" name="Changes" comment="aggiunta pannello per caricamento con relativi metodi per cambiarlo in Frame, correzione della finestra che non si ridimensiona più e si chiude in modo giusto, aggiunta JTextField per inserire chiave nel pannello iniziale, cambiata JTextArea con JTable per stampa delle 50 parole">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Control/Control.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/Control.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Frame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/InitialPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/InitialPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Panel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/WordsPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/WordsPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/50words.txt" beforeDir="false" afterPath="$PROJECT_DIR$/50words.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +80,7 @@
       <workItem from="1685429222172" duration="75000" />
       <workItem from="1685437477539" duration="618000" />
       <workItem from="1685518581873" duration="6799000" />
-      <workItem from="1685530336308" duration="2074000" />
+      <workItem from="1685530336308" duration="3076000" />
     </task>
     <task id="LOCAL-00001" summary="codice per scaricare 1000 articoli per argomento, messaggio di errore se non viene scaricato nessun articolo">
       <created>1685527263138</created>
@@ -93,7 +89,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685527263138</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="aggiunta pannello per caricamento con relativi metodi per cambiarlo in Frame, correzione della finestra che non si ridimensiona più e si chiude in modo giusto, aggiunta JTextField per inserire chiave nel pannello iniziale, cambiata JTextArea con JTable per stampa delle 50 parole">
+      <created>1685539060086</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1685539060086</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -112,6 +115,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="codice per scaricare 1000 articoli per argomento, messaggio di errore se non viene scaricato nessun articolo" />
-    <option name="LAST_COMMIT_MESSAGE" value="codice per scaricare 1000 articoli per argomento, messaggio di errore se non viene scaricato nessun articolo" />
+    <MESSAGE value="aggiunta pannello per caricamento con relativi metodi per cambiarlo in Frame, correzione della finestra che non si ridimensiona più e si chiude in modo giusto, aggiunta JTextField per inserire chiave nel pannello iniziale, cambiata JTextArea con JTable per stampa delle 50 parole" />
+    <option name="LAST_COMMIT_MESSAGE" value="aggiunta pannello per caricamento con relativi metodi per cambiarlo in Frame, correzione della finestra che non si ridimensiona più e si chiude in modo giusto, aggiunta JTextField per inserire chiave nel pannello iniziale, cambiata JTextArea con JTable per stampa delle 50 parole" />
   </component>
 </project>
