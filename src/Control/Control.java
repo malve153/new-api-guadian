@@ -121,14 +121,20 @@ public class Control implements WindowListener, ActionListener {
 					return;
 				}
 				try {
-					Response r = res.getContent(term);
-					new Serializzatore("Resources/Word.txt").writeObj(r.getResults());
+					Article a[] = res.getContent(term);
+					if(a==null){
+						JOptionPane.showMessageDialog(frame,
+								"Parola inserita non presente in alcun articolo", "Richiesta fallita", JOptionPane.ERROR_MESSAGE);
+					}
+					else{
+						new Serializzatore("Resources/Word.txt").writeObj(a);
+						JOptionPane.showMessageDialog(frame, "Download avvenuto con successo!", "Download articoli", JOptionPane.INFORMATION_MESSAGE, null);
+					}
 
 				} catch (Exception e1) {
 					e1.printStackTrace();
 				}
 				
-				JOptionPane.showMessageDialog(frame, "Download avvenuto con successo!", "Download articoli", JOptionPane.INFORMATION_MESSAGE, null);
 
 			}
 			else if(frame.getPanel().getRdbtnDownloadTermini().isSelected()) {
@@ -150,14 +156,20 @@ public class Control implements WindowListener, ActionListener {
 				}
 
 				try {
-					Response r = res.getContent(term);
-					words= ArticleList.mappingArticles(r.getResults());
-					new Serializzatore("Resources/Word.txt").writeObj(r.getResults());
-					new txtManager<Word>("Word.txt").saveWords(words);
-					opz2 = JOptionPane.showConfirmDialog(frame, "Vuoi stampare i termini a video?", "Termini", JOptionPane.YES_NO_OPTION);
+					Article a[] = res.getContent(term);
+					if(a==null){
+						JOptionPane.showMessageDialog(frame,
+								"Parola inserita non presente in alcun articolo", "Richiesta fallita", JOptionPane.ERROR_MESSAGE);
+					}
+					else {
+						words = ArticleList.mappingArticlesAmount(a);
+						new Serializzatore("Resources/Word.txt").writeObj(a);
+						new txtManager<Word>("Word.txt").saveWords(words);
+						opz2 = JOptionPane.showConfirmDialog(frame, "Vuoi stampare i termini a video?", "Termini", JOptionPane.YES_NO_OPTION);
 
-					if(opz2==0) {
-						printWords(words);
+						if (opz2 == 0) {
+							printWords(words);
+						}
 					}
 				} catch (Exception e1){
 					e1.printStackTrace();
@@ -182,8 +194,8 @@ public class Control implements WindowListener, ActionListener {
 					Deserializzatore des=new Deserializzatore(fileName);
 					ArrayList<Article> art= des.deserialize();
 					Article[] a= art.toArray(new Article[art.size()]);
-					ArrayList<Word> words=ArticleList.mappingArticles(a);
-					System.out.println(words.size());
+					ArrayList<Word> words=ArticleList.mappingArticlesAmount(a);
+
 					txtManager file=new txtManager("Resources/Word.txt");
 					file.saveWords(words);
 					opz2 = JOptionPane.showConfirmDialog(frame, "Vuoi stampare i termini a video?", "Termini", JOptionPane.YES_NO_OPTION);

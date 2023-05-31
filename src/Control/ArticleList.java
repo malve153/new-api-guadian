@@ -3,31 +3,44 @@ package Control;
 import Model.Article;
 import Model.Word;
 
-import java.util.ArrayList;
-import java.util.StringTokenizer;
-import java.util.Collections;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+import java.util.*;
+import Control.txtManager;
+
 
 public class ArticleList {
 
-    public static ArrayList<Word> mappingArticles(Article[] articles) {
+    public static int ARTICLE_SIZE = 50;
 
-        ArrayList<Word> al = new ArrayList<Word>();
+    public static ArrayList<Word> mappingArticles(Article[] articles)  {
+
+        ArrayList<Word> al = new ArrayList<Word>(ARTICLE_SIZE);
 
         StringTokenizer st;
         String key;
         String fullText;
+        Map<String, Integer> map = new HashMap<String, Integer>();
 
-        String keyCopy;
         int j = 0;
-        boolean alreadyfound;
+        ArrayList<String> bannedWords=null;
+        try {
+            bannedWords = new txtManager<String>("Resources/stopList.txt").readFile(String.class);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
 
+        long l = System.currentTimeMillis();
         for (int i = 0; i < articles.length; i++) {
+
             fullText = articles[i].getWebTitle() + " " + articles[i].getFields().getBodyText();
             st = new StringTokenizer(fullText);
-            keyCopy = "";
+            Map<String, Integer> map1 = new HashMap<String, Integer>(st.countTokens());
 
             while (st.hasMoreTokens()) {
-                alreadyfound = false;
+
                 key = st.nextToken();
 
                 key = key.replaceAll("[,.;:?!(){}^'\n\"“” ]", "");
@@ -36,27 +49,46 @@ public class ArticleList {
 
                 key = key.toLowerCase();
 
-                if (al.size() != 0) {
-                    j = 0;
-                    while (j < al.size() && !alreadyfound) {
-                        if (al.get(j).getWord().compareTo(key) == 0)
-                            alreadyfound = true;
-                        else
-                            j++;
-                    }
+                if(key.length()!=0 && key.compareTo("–")!=0 &&!bannedWords.contains(key)) {
+                    map1.put(key, map.getOrDefault(key, 1));
                 }
-                if (!alreadyfound)
-                    al.add(new Word(key));
-                else if (alreadyfound && !keyCopy.contains(key))
-                    al.get(j).setValue(al.get(j).getValue() + 1);
 
-                keyCopy = keyCopy + " " + key;
+            }
+
+            if(!map1.containsKey("milan")){
+                System.out.println("milan on presente i "+i+" web "+articles[i].getWebTitle());
+            }
+
+            for (String k : map1.keySet()) {
+                map.put(k, map.getOrDefault(k, 0) + 1);
+
             }
 
         }
-        Collections.sort(al, new Word());
-        return al;
 
+        for (String k : map.keySet()) {
+
+            al.add(new Word(k, map.get(k)));
+
+        }
+
+        Collections.sort(al, new Word());
+        System.out.println("valore al termine del ciclo" + (System.currentTimeMillis() - l));
+
+        return al;
+    }
+
+
+    public static ArrayList<Word> mappingArticlesAmount(Article[] articles) {
+        ArrayList<Word> a1 = new ArrayList<Word>();
+        ArrayList<Word> a2 = mappingArticles(articles);
+        if(a2.size()<ARTICLE_SIZE)
+            for(int i=0;i<a2.size();i++)
+                a1.add(a2.get(i));
+        else
+            for(int i=0;i<ARTICLE_SIZE;i++)
+                a1.add(a2.get(i));
+        return a1;
     }
 
     public static String mapToString(ArrayList<Word> al) {
@@ -66,4 +98,5 @@ public class ArticleList {
         s = s + "\nGrandezza Array: " + al.size();
         return s;
     }
+
 }

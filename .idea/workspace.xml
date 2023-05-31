@@ -4,18 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a27e7b7-091f-4fc4-9e36-f9fca2104db4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Control/Deserializzatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/Deserializzatore.java" afterDir="false" />
+    <list default="true" id="1a27e7b7-091f-4fc4-9e36-f9fca2104db4" name="Changes" comment="aggiunta GUI e aggiunta controller">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/50words.txt" beforeDir="false" afterPath="$PROJECT_DIR$/50words.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Word.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Word.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Control/ArticleList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ArticleList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Control/Control.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/Control.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Control/GuardianContentApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/GuardianContentApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Control/txtManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/txtManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Word.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Word.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,23 +27,26 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectId" id="2QHV15bRfDCXHirsCLpV7LVkW3x" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/claud/Desktop/new-api-guadian2",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/claud/Desktop/demo-project&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -72,10 +70,33 @@
       <option name="presentableId" value="Default" />
       <updated>1685010277220</updated>
       <workItem from="1685010278294" duration="338000" />
+      <workItem from="1685010840159" duration="218000" />
+      <workItem from="1685024590015" duration="315000" />
+      <workItem from="1685030679649" duration="69000" />
+      <workItem from="1685032353368" duration="1246000" />
+      <workItem from="1685085802894" duration="3632000" />
+      <workItem from="1685183044242" duration="624000" />
+      <workItem from="1685198572598" duration="1000" />
+      <workItem from="1685351344475" duration="7309000" />
+      <workItem from="1685429103801" duration="4000" />
+      <workItem from="1685429222172" duration="75000" />
+      <workItem from="1685437477539" duration="618000" />
+      <workItem from="1685518581873" duration="6564000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

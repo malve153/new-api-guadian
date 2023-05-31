@@ -1,5 +1,6 @@
 package Control;
 
+import Model.Article;
 import Model.Response;
 import Control.ResponseWrapper;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -14,6 +15,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class GuardianContentApi {
+
+  private static final int PAGE_SIZE = 200;
+  private static final int TOTAL_ARTICLE = 1000;
 
   static {
 // Only one time
@@ -62,10 +66,10 @@ public class GuardianContentApi {
   public void setToDate(Date date) {
     this.toDate = date;
   }
-
+/*
   public Response getContent() throws UnirestException {
   return getContent(null);
-  }
+  }*/
 
   public String getTag() {
     return tag;
@@ -75,38 +79,43 @@ public class GuardianContentApi {
     this.tag = tag;
   }
 
-  public Response getContent(String query) throws UnirestException {
+  public Article[] getContent(String query) throws UnirestException {
 
-    HttpRequest request = Unirest.get(TARGET_URL)
-            .queryString("show-fields", "body-text")
-        .header("accept", "application/json");
-    //request.queryString("bodyText",bodyText);
+    int i=1,totalPages=1,dimLogic=0;
 
-    if (query != null && !query.isEmpty()) {
-      request.queryString("q", query);
-    }
+    Article[] art=new Article[TOTAL_ARTICLE];
 
-    if (section != null && !section.isEmpty()) {
-      request.queryString("section", section);
-    }
+    while(i<=totalPages && dimLogic<TOTAL_ARTICLE){
+      HttpRequest request = Unirest.get(TARGET_URL)
+              .queryString("show-fields", "body-text").
+              queryString("page-size",PAGE_SIZE).queryString("page",i).queryString("q", query)
+              .header("accept", "application/json").queryString("api-key", apiKey);
 
-    if (tag != null && !tag.isEmpty()) {
-      request.queryString("tag", tag);
-    }
+      HttpResponse<ResponseWrapper> response = request.asObject(ResponseWrapper.class);
+      totalPages=response.getBody().getResponse().getTotal();
 
-    if (fromDate != null){
-      request.queryString("from-date", dateFormat.format(fromDate));
+      if(response.getBody().getResponse().getStatus().compareTo("ok")==0 && (dimLogic+response.getBody().getResponse().getResults().length)<=art.length){
+
+        System.arraycopy(response.getBody().getResponse().getResults(),0,art,dimLogic,response.getBody().getResponse().getResults().length);
+        dimLogic+=response.getBody().getResponse().getResults().length;
+
+        i++;
+      }
+      else {
+        totalPages=TOTAL_ARTICLE+1;
+      }
+
+      if(dimLogic==0){
+        return null;
+      }
+
     }
-    if (toDate != null){
-      request.queryString("to-date", dateFormat.format(toDate));
-    }
-    request.queryString("api-key", apiKey);
 
 //    System.out.println(request.getUrl());
 
-    HttpResponse<ResponseWrapper> response = request.asObject(ResponseWrapper.class);
+    //HttpResponse<ResponseWrapper> response = request.asObject(ResponseWrapper.class);
 
-    return response.getBody().getResponse();
+    return art;
 
   }
 }
