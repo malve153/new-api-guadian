@@ -1,29 +1,18 @@
 package Control;
 
-import java.awt.EventQueue;
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import java.util.ArrayList;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicReference;
 
-import javax.swing.AbstractButton;
-import javax.swing.JOptionPane;
-import Control.txtManager;
-import Control.Serializzatore;
-import Control.Deserializzatore;
+import javax.swing.*;
+
 import Model.Article;
-import Control.ArticleList;
-import Control.GuardianContentApi;
 import Model.Word;
-import Model.Article;
-import Model.Response;
 import View.Frame;
-import View.WordsPanel;
-import com.mashape.unirest.http.exceptions.UnirestException;
 
 public class Control implements WindowListener, ActionListener {
 
@@ -32,7 +21,7 @@ public class Control implements WindowListener, ActionListener {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	/*public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -42,7 +31,7 @@ public class Control implements WindowListener, ActionListener {
 				}
 			}
 		});
-	}
+	}*/
 
 	public Control() {
 		frame = new Frame();
@@ -58,8 +47,7 @@ public class Control implements WindowListener, ActionListener {
 
 	@Override
 	public void windowClosing(WindowEvent e) {
-		// TODO Auto-generated method stub
-		JOptionPane.showConfirmDialog(frame, "Sicuro di voler uscire?", "Uscita", JOptionPane.YES_NO_OPTION);
+		uscita();
 	}
 
 	@Override
@@ -95,7 +83,8 @@ public class Control implements WindowListener, ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		int opz=1, opz2=1;
+		int opz=1;
+		AtomicInteger opz2= new AtomicInteger(1);
 		String term=null;
 
 		if(e.getSource() == frame.getInitialPane().getBtnStart()) {
@@ -108,6 +97,7 @@ public class Control implements WindowListener, ActionListener {
 
 			if(frame.getPanel().getRdbtnDownload().isSelected()) {
 				//solo download
+
 				opz = JOptionPane.showConfirmDialog(frame, "Vuoi cercare articoli con una parola in particolare?", "Ricerca termini", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
 
 				if (opz == 0) {
@@ -121,25 +111,35 @@ public class Control implements WindowListener, ActionListener {
 					return;
 				}
 				try {
-					Article a[] = res.getContent(term);
-					if(a==null){
-						JOptionPane.showMessageDialog(frame,
-								"Parola inserita non presente in alcun articolo", "Richiesta fallita", JOptionPane.ERROR_MESSAGE);
-					}
-					else{
-						new Serializzatore("Resources/Word.txt").writeObj(a);
-						JOptionPane.showMessageDialog(frame, "Download avvenuto con successo!", "Download articoli", JOptionPane.INFORMATION_MESSAGE, null);
-					}
+					frame.changePanelToLoadPanel();
+					frame.getLoadPanel().setLbl("sto scaricando gli articoli...");
+					String finalTerm1 = term;
+					new Thread(() -> {
+						try {
+							Article a[] = res.getContent(finalTerm1);
+							if (a == null) {
+								JOptionPane.showMessageDialog(frame,
+										"Parola inserita non presente in alcun articolo", "Richiesta fallita", JOptionPane.ERROR_MESSAGE);
+							} else {
+								frame.getLoadPanel().setLbl("salvataggio articoli in corso...");
+								new Serializzatore("Resources/Word.txt").writeObj(a);
+								frame.changeLoadPanelToPanel();
+								JOptionPane.showMessageDialog(frame, "Download avvenuto con successo!", "Download articoli", JOptionPane.INFORMATION_MESSAGE, null);
 
+							}
+						}
+						catch (Exception exc){
+							exc.printStackTrace();
+						}
+					}).start();
 				} catch (Exception e1) {
 					e1.printStackTrace();
 				}
-				
+
 
 			}
 			else if(frame.getPanel().getRdbtnDownloadTermini().isSelected()) {
 				//entrambe
-				ArrayList<Word> words=null;
 
 				opz = JOptionPane.showConfirmDialog(frame, "Vuoi cercare articoli con una parola in particolare?", "Ricerca termini", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
 
@@ -156,21 +156,45 @@ public class Control implements WindowListener, ActionListener {
 				}
 
 				try {
-					Article a[] = res.getContent(term);
-					if(a==null){
-						JOptionPane.showMessageDialog(frame,
-								"Parola inserita non presente in alcun articolo", "Richiesta fallita", JOptionPane.ERROR_MESSAGE);
-					}
-					else {
-						words = ArticleList.mappingArticlesAmount(a);
-						new Serializzatore("Resources/Word.txt").writeObj(a);
-						new txtManager<Word>("Word.txt").saveWords(words);
-						opz2 = JOptionPane.showConfirmDialog(frame, "Vuoi stampare i termini a video?", "Termini", JOptionPane.YES_NO_OPTION);
 
-						if (opz2 == 0) {
-							printWords(words);
+
+					String finalTerm = term;
+					new Thread(() -> {
+						try{
+							ArrayList<Word> words=null;
+							Article a[] = res.getContent(finalTerm);
+							if(a==null){
+								JOptionPane.showMessageDialog(frame,
+										"Parola inserita non presente in alcun articolo", "Richiesta fallita", JOptionPane.ERROR_MESSAGE);
+							}
+							else {
+								frame.getLoadPanel().setLbl("calcolo occorrenze delle parole...");
+								words=ArticleList.mappingArticlesAmount(a);
+								frame.getLoadPanel().setLbl("salvataggio articoli in corso...");
+
+								new Serializzatore("Resources/Word.txt").writeObj(a);
+								new txtManager<Word>("Word.txt").saveWords(words);
+								frame.getLoadPanel().setLbl("salvataggio terminato...");
+								opz2.set(JOptionPane.showConfirmDialog(frame, "Vuoi stampare i termini a video?", "Termini", JOptionPane.YES_NO_OPTION));
+
+								if (opz2.get() == 0) {
+									frame.changeLoadPanelToWordsPanel();
+									printWords(words);
+								} else {
+									frame.changeLoadPanelToPanel();
+								}
+							}
+						} catch (Exception ex) {
+
 						}
-					}
+
+
+					}).start();
+
+					frame.changePanelToLoadPanel();
+					frame.getLoadPanel().setLbl("sto scaricando gli articoli...");
+
+
 				} catch (Exception e1){
 					e1.printStackTrace();
 				}
@@ -198,9 +222,9 @@ public class Control implements WindowListener, ActionListener {
 
 					txtManager file=new txtManager("Resources/Word.txt");
 					file.saveWords(words);
-					opz2 = JOptionPane.showConfirmDialog(frame, "Vuoi stampare i termini a video?", "Termini", JOptionPane.YES_NO_OPTION);
+					opz2.set(JOptionPane.showConfirmDialog(frame, "Vuoi stampare i termini a video?", "Termini", JOptionPane.YES_NO_OPTION));
 
-					if(opz2==0) {
+					if(opz2.get() ==0) {
 						printWords(words);
 					}
 
@@ -221,15 +245,23 @@ public class Control implements WindowListener, ActionListener {
 		frame.changePanel();
 		frame.getWordsPanel().getBtnIndietro().addActionListener(this);
 
-		String value="";
+		frame.getWordsPanel().getTable().setModel(frame.getWordsPanel().setTable(words));
+		frame.getWordsPanel().setTable();
+
+		/*String value="";
 		for (Word w:words) {
 			value+=w+"\n";
 		}
 
-		frame.getWordsPanel().setTextArea(value);
+		frame.getWordsPanel().setTextArea(value);*/
 
 	}
 
+	private void uscita() {
 
+		int u = JOptionPane.showConfirmDialog(frame, "Sicuro di voler uscire?", "Uscita", JOptionPane.YES_NO_OPTION);
+
+		if(u == JOptionPane.OK_OPTION) System.exit(0);
+	}
 
 }

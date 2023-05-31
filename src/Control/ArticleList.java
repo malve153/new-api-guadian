@@ -55,10 +55,6 @@ public class ArticleList {
 
             }
 
-            if(!map1.containsKey("milan")){
-                System.out.println("milan on presente i "+i+" web "+articles[i].getWebTitle());
-            }
-
             for (String k : map1.keySet()) {
                 map.put(k, map.getOrDefault(k, 0) + 1);
 
@@ -82,12 +78,14 @@ public class ArticleList {
     public static ArrayList<Word> mappingArticlesAmount(Article[] articles) {
         ArrayList<Word> a1 = new ArrayList<Word>();
         ArrayList<Word> a2 = mappingArticles(articles);
+
         if(a2.size()<ARTICLE_SIZE)
             for(int i=0;i<a2.size();i++)
                 a1.add(a2.get(i));
         else
             for(int i=0;i<ARTICLE_SIZE;i++)
                 a1.add(a2.get(i));
+
         return a1;
     }
 

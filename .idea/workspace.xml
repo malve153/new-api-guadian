@@ -5,15 +5,54 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a27e7b7-091f-4fc4-9e36-f9fca2104db4" name="Changes" comment="codice per scaricare 1000 articoli per argomento, messaggio di errore se non viene scaricato nessun articolo">
+      <change afterPath="$PROJECT_DIR$/src/View/LoadPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/50words.txt" beforeDir="false" afterPath="$PROJECT_DIR$/50words.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Word.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Word.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Control/ArticleList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ArticleList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Control/Control.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/Control.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Control/Deserializzatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/Deserializzatore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Control/GuardianContentApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/GuardianContentApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Control/ResponseWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ResponseWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Control/Serializzatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/Serializzatore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Control/txtManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/txtManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Article.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Field.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Response.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Word.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Word.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Frame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/InitialPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/InitialPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Panel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/WordsPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/WordsPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="5ab5131f-0ad1-4306-a71f-418088cea83c" />
+        <option name="url" value="https://github.com/malve153/new-api-guadian" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -26,12 +65,14 @@
     <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2QHV15bRfDCXHirsCLpV7LVkW3x" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/claud/Desktop/demo-project&quot;,
@@ -77,6 +118,8 @@
       <workItem from="1685429222172" duration="75000" />
       <workItem from="1685437477539" duration="618000" />
       <workItem from="1685518581873" duration="6799000" />
+      <workItem from="1685530336308" duration="2074000" />
+      <workItem from="1685540335823" duration="6023000" />
     </task>
     <task id="LOCAL-00001" summary="codice per scaricare 1000 articoli per argomento, messaggio di errore se non viene scaricato nessun articolo">
       <created>1685527263138</created>
