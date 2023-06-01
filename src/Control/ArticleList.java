@@ -43,7 +43,7 @@ public class ArticleList {
 
                 key = st.nextToken();
 
-                key = key.replaceAll("[,.;:?!(){}^'\n\"“” ]", "");
+                key = key.replaceAll("[,.;:?!(){}^'’\n\"“” ]", "");
                 key = key.replace("[", "");
                 key = key.replace("]", "");
 
@@ -54,7 +54,9 @@ public class ArticleList {
                 }
 
             }
-
+            if(!map1.containsKey("france")){
+                System.out.println("france non presente in "+i+" tit "+articles[i].getWebTitle());
+            }
             for (String k : map1.keySet()) {
                 map.put(k, map.getOrDefault(k, 0) + 1);
 

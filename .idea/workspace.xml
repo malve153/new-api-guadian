@@ -5,26 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a27e7b7-091f-4fc4-9e36-f9fca2104db4" name="Changes" comment="codice per scaricare 1000 articoli per argomento, messaggio di errore se non viene scaricato nessun articolo">
-      <change afterPath="$PROJECT_DIR$/src/View/LoadPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/50words.txt" beforeDir="false" afterPath="$PROJECT_DIR$/50words.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resources/Word.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Word.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Control/ArticleList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ArticleList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Control/Control.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/Control.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Control/Deserializzatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/Deserializzatore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Control/GuardianContentApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/GuardianContentApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Control/ResponseWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ResponseWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Control/Serializzatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/Serializzatore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Control/txtManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/txtManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Article.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Field.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Response.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Word.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Word.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Frame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/InitialPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/InitialPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Panel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/WordsPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/WordsPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,24 +27,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;
-  }
-}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
         <option name="accountId" value="5ab5131f-0ad1-4306-a71f-418088cea83c" />
         <option name="url" value="https://github.com/malve153/new-api-guadian" />
       </UrlAndAccount>
-    </option>
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="useMavenConfig" value="true" />
-      </MavenGeneralSettings>
     </option>
   </component>
   <component name="ProblemsViewState">
@@ -70,23 +44,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/claud/Desktop/demo-project&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  }
-}</component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="content-api-the-guardian" />
+      <module name="new-api-guadian" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -120,6 +87,10 @@
       <workItem from="1685518581873" duration="6799000" />
       <workItem from="1685530336308" duration="2074000" />
       <workItem from="1685540335823" duration="6023000" />
+      <workItem from="1685557752212" duration="70000" />
+      <workItem from="1685557886658" duration="97000" />
+      <workItem from="1685558100954" duration="1691000" />
+      <workItem from="1685647900531" duration="147000" />
     </task>
     <task id="LOCAL-00001" summary="codice per scaricare 1000 articoli per argomento, messaggio di errore se non viene scaricato nessun articolo">
       <created>1685527263138</created>
@@ -144,6 +115,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="codice per scaricare 1000 articoli per argomento, messaggio di errore se non viene scaricato nessun articolo" />

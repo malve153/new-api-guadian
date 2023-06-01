@@ -161,6 +161,8 @@ public class Control implements WindowListener, ActionListener {
 					String finalTerm = term;
 					new Thread(() -> {
 						try{
+							frame.changePanelToLoadPanel();
+							frame.getLoadPanel().setLbl("sto scaricando gli articoli...");
 							ArrayList<Word> words=null;
 							Article a[] = res.getContent(finalTerm);
 							if(a==null){
@@ -170,7 +172,7 @@ public class Control implements WindowListener, ActionListener {
 							else {
 								frame.getLoadPanel().setLbl("calcolo occorrenze delle parole...");
 								words=ArticleList.mappingArticlesAmount(a);
-								frame.getLoadPanel().setLbl("salvataggio articoli in corso...");
+								frame.getLoadPanel().setLbl("salvataggio in corso...");
 
 								new Serializzatore("Resources/Word.txt").writeObj(a);
 								new txtManager<Word>("Word.txt").saveWords(words);
@@ -191,8 +193,7 @@ public class Control implements WindowListener, ActionListener {
 
 					}).start();
 
-					frame.changePanelToLoadPanel();
-					frame.getLoadPanel().setLbl("sto scaricando gli articoli...");
+
 
 
 				} catch (Exception e1){
@@ -214,18 +215,37 @@ public class Control implements WindowListener, ActionListener {
 					} else if (selezione == 1) {
 						fileName="Resources/Word.txt";
 					}
+					try {
+						frame.changePanelToLoadPanel();
+						frame.getLoadPanel().setLbl("sto caricando gli articoli...");
+						String finalTerm1 = term;
+						String finalFileName = fileName;
+						new Thread(() -> {
+							try {
+								Deserializzatore des = new Deserializzatore(finalFileName);
+								ArrayList<Article> art = des.deserialize();
+								Article[] a = art.toArray(new Article[art.size()]);
+								frame.getLoadPanel().setLbl("calcolo occorrenze delle parole...");
+								ArrayList<Word> words = ArticleList.mappingArticlesAmount(a);
+								frame.getLoadPanel().setLbl("salvataggio dei dati in corso...");
+								txtManager file = new txtManager("Resources/Word.txt");
+								file.saveWords(words);
+								frame.getLoadPanel().setLbl("salvataggio terminato...");
+								opz2.set(JOptionPane.showConfirmDialog(frame, "Vuoi stampare i termini a video?", "Termini", JOptionPane.YES_NO_OPTION));
 
-					Deserializzatore des=new Deserializzatore(fileName);
-					ArrayList<Article> art= des.deserialize();
-					Article[] a= art.toArray(new Article[art.size()]);
-					ArrayList<Word> words=ArticleList.mappingArticlesAmount(a);
-
-					txtManager file=new txtManager("Resources/Word.txt");
-					file.saveWords(words);
-					opz2.set(JOptionPane.showConfirmDialog(frame, "Vuoi stampare i termini a video?", "Termini", JOptionPane.YES_NO_OPTION));
-
-					if(opz2.get() ==0) {
-						printWords(words);
+								if(opz2.get() ==0) {
+									printWords(words);
+								}
+								else{
+									frame.changeLoadPanelToPanel();
+								}
+							}
+							catch (Exception e1){
+								e1.printStackTrace();
+							}
+						}).start();
+					} catch (Exception e1) {
+						e1.printStackTrace();
 					}
 
 				} catch (Exception e1){
