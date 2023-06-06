@@ -22,7 +22,7 @@ public class ArticleList {
         StringTokenizer st;
         String key;
         String fullText;
-        Map<String, Integer> map = new HashMap<String, Integer>();
+        Map<String, Integer> map = new HashMap();
 
         int j = 0;
         ArrayList<String> bannedWords=null;
@@ -36,8 +36,9 @@ public class ArticleList {
         for (int i = 0; i < articles.length; i++) {
 
             fullText = articles[i].getWebTitle() + " " + articles[i].getFields().getBodyText();
+            System.out.println("full "+fullText);
             st = new StringTokenizer(fullText);
-            Map<String, Integer> map1 = new HashMap<String, Integer>(st.countTokens());
+            Map<String, Integer> map1 = new HashMap(st.countTokens());
 
             while (st.hasMoreTokens()) {
 
@@ -48,15 +49,17 @@ public class ArticleList {
                 key = key.replace("]", "");
 
                 key = key.toLowerCase();
+                System.out.println("key "+key+" mm "+bannedWords.contains(key));
 
-                if(key.length()!=0 && key.compareTo("–")!=0 &&!bannedWords.contains(key)) {
+                if(key.length()!=0 && key.compareTo("–")!=0 && !bannedWords.contains(key)) {
+                    System.out.println("aggiunta");
                     map1.put(key, map.getOrDefault(key, 1));
                 }
 
             }
-            if(!map1.containsKey("france")){
+            /*if(!map1.containsKey("france")){
                 System.out.println("france non presente in "+i+" tit "+articles[i].getWebTitle());
-            }
+            }*/
             for (String k : map1.keySet()) {
                 map.put(k, map.getOrDefault(k, 0) + 1);
 

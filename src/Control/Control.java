@@ -18,21 +18,6 @@ public class Control implements WindowListener, ActionListener {
 
 	Frame frame;
 
-	/**
-	 * Launch the application.
-	 */
-	/*public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Control control = new Control();
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}*/
-
 	public Control() {
 		frame = new Frame();
 		frame.getInitialPane().getBtnStart().addActionListener(this);
@@ -111,11 +96,12 @@ public class Control implements WindowListener, ActionListener {
 					return;
 				}
 				try {
-					frame.changePanelToLoadPanel();
-					frame.getLoadPanel().setLbl("sto scaricando gli articoli...");
+
 					String finalTerm1 = term;
 					new Thread(() -> {
 						try {
+							frame.changePanelToLoadPanel();
+							frame.getLoadPanel().setLbl("sto scaricando gli articoli...");
 							Article a[] = res.getContent(finalTerm1);
 							if (a == null) {
 								JOptionPane.showMessageDialog(frame,
@@ -128,12 +114,15 @@ public class Control implements WindowListener, ActionListener {
 
 							}
 						}
-						catch (Exception exc){
-							exc.printStackTrace();
+						catch (Exception e1){
+							JOptionPane.showMessageDialog(frame,
+									"Errore durante l'esecuzione", "Operazione fallita", JOptionPane.ERROR_MESSAGE);
+							frame.changeLoadPanelToPanel();
 						}
 					}).start();
 				} catch (Exception e1) {
-					e1.printStackTrace();
+					JOptionPane.showMessageDialog(frame,
+							"Errore durante l'esecuzione", "Operazione fallita", JOptionPane.ERROR_MESSAGE);
 				}
 
 
@@ -186,8 +175,10 @@ public class Control implements WindowListener, ActionListener {
 									frame.changeLoadPanelToPanel();
 								}
 							}
-						} catch (Exception ex) {
-
+						} catch (Exception e1) {
+							JOptionPane.showMessageDialog(frame,
+									"Errore durante l'esecuzione", "Operazione fallita", JOptionPane.ERROR_MESSAGE);
+							frame.changeLoadPanelToPanel();
 						}
 
 
@@ -197,7 +188,8 @@ public class Control implements WindowListener, ActionListener {
 
 
 				} catch (Exception e1){
-					e1.printStackTrace();
+					JOptionPane.showMessageDialog(frame,
+							"Errore durante l'esecuzione", "Operazione fallita", JOptionPane.ERROR_MESSAGE);
 				}
 
 
@@ -215,41 +207,40 @@ public class Control implements WindowListener, ActionListener {
 					} else if (selezione == 1) {
 						fileName="Resources/Word.txt";
 					}
-					try {
-						frame.changePanelToLoadPanel();
-						frame.getLoadPanel().setLbl("sto caricando gli articoli...");
-						String finalTerm1 = term;
-						String finalFileName = fileName;
-						new Thread(() -> {
-							try {
-								Deserializzatore des = new Deserializzatore(finalFileName);
-								ArrayList<Article> art = des.deserialize();
-								Article[] a = art.toArray(new Article[art.size()]);
-								frame.getLoadPanel().setLbl("calcolo occorrenze delle parole...");
-								ArrayList<Word> words = ArticleList.mappingArticlesAmount(a);
-								frame.getLoadPanel().setLbl("salvataggio dei dati in corso...");
-								txtManager file = new txtManager("Resources/Word.txt");
-								file.saveWords(words);
-								frame.getLoadPanel().setLbl("salvataggio terminato...");
-								opz2.set(JOptionPane.showConfirmDialog(frame, "Vuoi stampare i termini a video?", "Termini", JOptionPane.YES_NO_OPTION));
+					frame.changePanelToLoadPanel();
+					frame.getLoadPanel().setLbl("sto caricando gli articoli...");
+					String finalTerm1 = term;
+					String finalFileName = fileName;
+					new Thread(() -> {
+						try {
 
-								if(opz2.get() ==0) {
-									printWords(words);
-								}
-								else{
-									frame.changeLoadPanelToPanel();
-								}
+							ArrayList<Article> art = new Deserializzatore(finalFileName).deserialize();
+							Article[] a = art.toArray(new Article[art.size()]);
+							frame.getLoadPanel().setLbl("calcolo occorrenze delle parole...");
+							ArrayList<Word> words = ArticleList.mappingArticlesAmount(a);
+							frame.getLoadPanel().setLbl("salvataggio dei dati in corso...");
+							new txtManager("Resources/Word.txt").saveWords(words);
+							frame.getLoadPanel().setLbl("salvataggio terminato...");
+							opz2.set(JOptionPane.showConfirmDialog(frame, "Vuoi stampare i termini a video?", "Termini", JOptionPane.YES_NO_OPTION));
+
+							if(opz2.get() ==0) {
+								printWords(words);
 							}
-							catch (Exception e1){
-								e1.printStackTrace();
+							else{
+								frame.changeLoadPanelToPanel();
 							}
-						}).start();
-					} catch (Exception e1) {
-						e1.printStackTrace();
-					}
+						}
+						catch (Exception e1){
+							JOptionPane.showMessageDialog(frame,
+									"Errore durante l'esecuzione", "Operazione fallita", JOptionPane.ERROR_MESSAGE);
+							frame.changeLoadPanelToPanel();
+						}
+					}).start();
 
 				} catch (Exception e1){
-					e1.printStackTrace();
+					JOptionPane.showMessageDialog(frame,
+							"Errore durante l'esecuzione", "Operazione fallita", JOptionPane.ERROR_MESSAGE);
+					frame.changeLoadPanelToPanel();
 				}
 
 
@@ -267,13 +258,6 @@ public class Control implements WindowListener, ActionListener {
 
 		frame.getWordsPanel().getTable().setModel(frame.getWordsPanel().setTable(words));
 		frame.getWordsPanel().setTable();
-
-		/*String value="";
-		for (Word w:words) {
-			value+=w+"\n";
-		}
-
-		frame.getWordsPanel().setTextArea(value);*/
 
 	}
 

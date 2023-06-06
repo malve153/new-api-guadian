@@ -7,9 +7,12 @@ import java.util.*;
 import Model.Word;
 
 public class txtManager <T>{
-
+    /**
+     * Nome del file in cui salvare o leggere i dati
+     */
     private String fileName;
-    private static final int numeroParole=50;
+
+    private static final int NUMERO_PAROLE=50;
 
     public txtManager(String fileName){
         this.fileName=fileName;
@@ -45,7 +48,7 @@ public class txtManager <T>{
         File file=new File(fileName);
         Scanner sc=new Scanner(file);
 
-        ArrayList<T> word=new ArrayList<T>(numeroParole);
+        ArrayList<T> word=new ArrayList<T>(NUMERO_PAROLE);
 
         while (sc.hasNext()) {
 

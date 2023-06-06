@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a27e7b7-091f-4fc4-9e36-f9fca2104db4" name="Changes" comment="codice per scaricare 1000 articoli per argomento, messaggio di errore se non viene scaricato nessun articolo">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="1a27e7b7-091f-4fc4-9e36-f9fca2104db4" name="Changes" comment="aggiunta gestione apostrofo negli articoli e miglioramento bug grafica">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/50words.txt" beforeDir="false" afterPath="$PROJECT_DIR$/50words.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resources/Word.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Word.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Control/ArticleList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ArticleList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Control/Control.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/Control.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Control/Deserializzatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/Deserializzatore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Control/txtManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/txtManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,9 +49,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../eis2223" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.ArticleListTest.mappingArticlesTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="new-api-guadian" />
@@ -58,8 +59,57 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ArticleListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="new-api-guadian" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Test" />
+      <option name="MAIN_CLASS_NAME" value="Test.ArticleListTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ArticleListTest.mappingArticlesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="new-api-guadian" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Test" />
+      <option name="MAIN_CLASS_NAME" value="Test.ArticleListTest" />
+      <option name="METHOD_NAME" value="mappingArticlesTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="txtManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="new-api-guadian" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Test" />
+      <option name="MAIN_CLASS_NAME" value="Test.txtManagerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ArticleListTest.mappingArticlesTest" />
+        <item itemvalue="JUnit.ArticleListTest" />
+        <item itemvalue="JUnit.txtManagerTest" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -90,7 +140,13 @@
       <workItem from="1685557752212" duration="70000" />
       <workItem from="1685557886658" duration="97000" />
       <workItem from="1685558100954" duration="1691000" />
-      <workItem from="1685647900531" duration="147000" />
+      <workItem from="1685647900531" duration="751000" />
+      <workItem from="1685648807514" duration="354000" />
+      <workItem from="1685792588939" duration="1460000" />
+      <workItem from="1685794100137" duration="290000" />
+      <workItem from="1686040765021" duration="440000" />
+      <workItem from="1686044530482" duration="590000" />
+      <workItem from="1686057881734" duration="3282000" />
     </task>
     <task id="LOCAL-00001" summary="codice per scaricare 1000 articoli per argomento, messaggio di errore se non viene scaricato nessun articolo">
       <created>1685527263138</created>
@@ -99,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685527263138</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="aggiunta gestione apostrofo negli articoli e miglioramento bug grafica">
+      <created>1685648249162</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1685648249162</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,6 +182,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="codice per scaricare 1000 articoli per argomento, messaggio di errore se non viene scaricato nessun articolo" />
-    <option name="LAST_COMMIT_MESSAGE" value="codice per scaricare 1000 articoli per argomento, messaggio di errore se non viene scaricato nessun articolo" />
+    <MESSAGE value="aggiunta gestione apostrofo negli articoli e miglioramento bug grafica" />
+    <option name="LAST_COMMIT_MESSAGE" value="aggiunta gestione apostrofo negli articoli e miglioramento bug grafica" />
   </component>
 </project>
