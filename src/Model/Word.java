@@ -11,8 +11,14 @@ public class Word implements Comparator<Word> {
         value=0;
     }
     public Word(String w){
-        this.w=w;
-        value=1;
+        if(w.contains(" ")){
+            this.w=w.substring(0,w.indexOf(" "));
+            this.value=Integer.valueOf(w.substring(w.indexOf(" ")+1,w.length()));
+        }
+        else{
+            this.w=w;
+            this.value=0;
+        }
     }
     public Word(String w,int value){
         this.w=w;
