@@ -16,7 +16,13 @@ import java.util.Date;
 
 public class GuardianContentApi {
 
+  /**
+   * Dimensione pagina
+   */
   private static final int PAGE_SIZE = 200;
+  /**
+   * Numero massimo di articoli
+   */
   private static final int TOTAL_ARTICLE = 1000;
 
   static {
@@ -43,42 +49,89 @@ public class GuardianContentApi {
     });
   }
 
+  /**
+   * URL dell'API
+   */
   private final static String TARGET_URL = "https://content.guardianapis.com/search";
+  /**
+   * Formato data
+   */
   private final static SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+  /**
+   * Chiave per utilizzare l'API
+   */
   private final String apiKey;
+  /**
+   * Sezione in cui cercare gli articoli
+   */
   private String section;
+  /**
+   * Tag degli articoli da cercare
+   */
   private String tag;
+  /**
+   * Cerca articoli pubblicati fino a quella data
+   */
   private Date toDate;
+  /**
+   * Cerca articoli pubblicati da quella data in poi
+   */
   private Date fromDate;
 
+  /**
+   * Costruttore della classe
+   * @param apiKey chiave per utilizzare l'API
+   */
   public GuardianContentApi(final String apiKey) {
     this.apiKey = apiKey;
   }
 
+  /**
+   * Imposta la sezione
+   * @param section
+   */
   public void setSection(String section) {
     this.section = section;
   }
 
+  /**
+   * Imposta la data di partenza per cercare gli articoli
+   * @param date
+   */
   public void setFromDate(Date date) {
     this.fromDate = date;
   }
 
+  /**
+   * Imposta la data fino alla quale cercare articoli
+   * @param date
+   */
   public void setToDate(Date date) {
     this.toDate = date;
   }
-/*
-  public Response getContent() throws UnirestException {
-  return getContent(null);
-  }*/
 
+  /**
+   * Ritorna il tag
+   * @return tag degli articoli
+   */
   public String getTag() {
     return tag;
   }
 
+  /**
+   * imposta il tag
+   * @param tag
+   */
   public void setTag(String tag) {
     this.tag = tag;
   }
 
+  /**
+   * Ritorna gli articoli ricevuti dall'API
+   * @param query Richiesta da effettuare all'API
+   * @return NULL se la richiesta non è andata a buon fine, altrimenti un Array di Article
+   * @throws UnirestException
+   */
   public Article[] getContent(String query) throws UnirestException {
 
     int i=1,totalPages=1,dimLogic=0;
@@ -111,9 +164,6 @@ public class GuardianContentApi {
 
     }
 
-//    System.out.println(request.getUrl());
-
-    //HttpResponse<ResponseWrapper> response = request.asObject(ResponseWrapper.class);
 
     return art;
 

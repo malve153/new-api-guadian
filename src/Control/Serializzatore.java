@@ -10,13 +10,31 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class Serializzatore {
+	/**
+	 * Apre un output stream per scrivere dati su file
+	 */
 	FileOutputStream out;
+	/**
+	 * Fornisce funzionalità per la lettura e la scrittura di JSON
+	 */
 	ObjectMapper oos;
+	/**
+	 * Nome del file su cui scrivere
+	 */
 	String nomeFile;
 
+	/**
+	 * Costruttore della classe
+	 * @param nomeFile nome del file su cui scrivere
+	 */
 	public Serializzatore(String nomeFile){
 		this.nomeFile = nomeFile;
 	}
+
+	/**
+	 * Metodo per scrivere su file JSON gli oggetti contenenti gli articoli
+	 * @param article Array di articoli
+	 */
 	public void writeObj(Article[] article){
 		try {
 			out = new FileOutputStream(nomeFile);

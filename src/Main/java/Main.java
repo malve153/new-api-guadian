@@ -10,9 +10,17 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 
 public class Main {
+	/**
+	 * Metodo eseguibile
+	 * @param args
+	 * @throws IOException
+	 * @throws ClassNotFoundException
+	 * @throws InvocationTargetException
+	 * @throws InstantiationException
+	 * @throws IllegalAccessException
+	 * @throws NoSuchMethodException
+	 */
 	public static void main(String[] args) throws IOException, ClassNotFoundException, InvocationTargetException, InstantiationException, IllegalAccessException, NoSuchMethodException {
-        /*Control.Deserializzatore d=new Deserializzatore("Resources/nytimes_articles_v2.csv");
-		ArrayList<Model.Article> a= d.deserializeCSV();*/
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
