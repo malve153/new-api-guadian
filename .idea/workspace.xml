@@ -4,20 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a27e7b7-091f-4fc4-9e36-f9fca2104db4" name="Changes" comment="aggiunta gestione apostrofo negli articoli e miglioramento bug grafica">
+    <list default="true" id="1a27e7b7-091f-4fc4-9e36-f9fca2104db4" name="Changes" comment="Aggiunti commenti secondo javadoc">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/50words.txt" beforeDir="false" afterPath="$PROJECT_DIR$/50words.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Word.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Word.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Control/ArticleList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ArticleList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Control/GuardianContentApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/GuardianContentApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Control/ResponseWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ResponseWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Control/Serializzatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/Serializzatore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Control/txtManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/txtManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Article.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Field.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Response.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Word.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Word.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +21,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
@@ -51,18 +40,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -159,7 +148,9 @@
       <workItem from="1686040765021" duration="440000" />
       <workItem from="1686044530482" duration="590000" />
       <workItem from="1686057881734" duration="3282000" />
-      <workItem from="1686226702394" duration="6476000" />
+      <workItem from="1686226702394" duration="8658000" />
+      <workItem from="1686384565743" duration="5545000" />
+      <workItem from="1686400038424" duration="4821000" />
     </task>
     <task id="LOCAL-00001" summary="codice per scaricare 1000 articoli per argomento, messaggio di errore se non viene scaricato nessun articolo">
       <created>1685527263138</created>
@@ -175,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685648249162</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Aggiunti commenti secondo javadoc">
+      <created>1686234775019</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1686234775019</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,6 +193,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="codice per scaricare 1000 articoli per argomento, messaggio di errore se non viene scaricato nessun articolo" />
     <MESSAGE value="aggiunta gestione apostrofo negli articoli e miglioramento bug grafica" />
-    <option name="LAST_COMMIT_MESSAGE" value="aggiunta gestione apostrofo negli articoli e miglioramento bug grafica" />
+    <MESSAGE value="Aggiunti commenti secondo javadoc" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aggiunti commenti secondo javadoc" />
   </component>
 </project>
