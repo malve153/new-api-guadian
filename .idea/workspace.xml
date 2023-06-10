@@ -182,7 +182,7 @@
       <workItem from="1686226702394" duration="6476000" />
       <workItem from="1686315454443" duration="1726000" />
       <workItem from="1686325750057" duration="9161000" />
-      <workItem from="1686407819006" duration="5887000" />
+      <workItem from="1686407819006" duration="6189000" />
     </task>
     <task id="LOCAL-00001" summary="codice per scaricare 1000 articoli per argomento, messaggio di errore se non viene scaricato nessun articolo">
       <created>1685527263138</created>
@@ -198,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685648249162</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="documentazione classe Control e package View, creazione package com, rimozione immagine per caricamento">
+      <created>1686416955404</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1686416955404</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
