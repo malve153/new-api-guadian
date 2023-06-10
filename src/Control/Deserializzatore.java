@@ -1,6 +1,6 @@
 package Control;
 
-import Model.Article;
+import apiguardian.Article;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.opencsv.bean.CsvToBeanBuilder;

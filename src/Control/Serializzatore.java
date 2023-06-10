@@ -1,6 +1,6 @@
 package Control;
 
-import Model.Article;
+import apiguardian.Article;
 import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -13,15 +13,15 @@ public class Serializzatore {
 	/**
 	 * Apre un output stream per scrivere dati su file
 	 */
-	FileOutputStream out;
+	private FileOutputStream out;
 	/**
 	 * Fornisce funzionalità per la lettura e la scrittura di JSON
 	 */
-	ObjectMapper oos;
+	private ObjectMapper oos;
 	/**
 	 * Nome del file su cui scrivere
 	 */
-	String nomeFile;
+	private String nomeFile;
 
 	/**
 	 * Costruttore della classe

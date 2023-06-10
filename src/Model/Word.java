@@ -6,17 +6,17 @@ public class Word implements Comparator<Word> {
     /**
      * Stringa che contiene la parola
      */
-    String w;
+    private String word;
     /**
      * Numero di occorrenze della parola
      */
-    int value;
+    private int value;
 
     /**
      * Costruttore di default
      */
     public Word(){
-        w="";
+        word="";
         value=0;
     }
 
@@ -26,11 +26,11 @@ public class Word implements Comparator<Word> {
      */
     public Word(String w){
         if(w.contains(" ")){
-            this.w=w.substring(0,w.indexOf(" "));
+            this.word=w.substring(0,w.indexOf(" "));
             this.value=Integer.valueOf(w.substring(w.indexOf(" ")+1,w.length()));
         }
         else{
-            this.w=w;
+            this.word=w;
             this.value=0;
         }
     }
@@ -41,7 +41,7 @@ public class Word implements Comparator<Word> {
      * @param value numero occorrenze
      */
     public Word(String w,int value){
-        this.w=w;
+        this.word=w;
         this.value=value;
     }
 
@@ -59,7 +59,7 @@ public class Word implements Comparator<Word> {
      * @return parola
      */
     public String getWord() {
-        return w;
+        return word;
     }
 
     /**
@@ -67,12 +67,12 @@ public class Word implements Comparator<Word> {
      * @param w parola
      */
     public void setWord(String w) {
-        this.w = w;
+        this.word = w;
     }
 
     /**
      * Ritorna il numero di occorrenze
-     * @return numero ocorrenze
+     * @return numero occorrenze
      */
     public int getValue() {
         return value;

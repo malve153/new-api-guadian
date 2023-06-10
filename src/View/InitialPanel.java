@@ -9,12 +9,28 @@ import javax.swing.JTextField;
 
 public class InitialPanel extends JPanel {
 
-	JLabel lblBenvenuto, lblInserisci;
-	JButton btnStart;
+	/**
+	 * Etichetta per benvenuto
+	 */
+	private JLabel lblBenvenuto;
+
+	/**
+	 * Etichetta per richiedere la chiave
+	 */
+	private JLabel lblInserisci;
+
+	/**
+	 * Bottone per far partire l'azione
+	 */
+	private JButton btnStart;
+
+	/**
+	 * TextField dove inserire la chiave
+	 */
 	private JTextField textField;
 
 	/**
-	 * Create the panel.
+	 * Costruttore del pannello iniziale
 	 */
 	public InitialPanel() {
 
@@ -44,10 +60,16 @@ public class InitialPanel extends JPanel {
 
 	}
 
-	public JButton getBtnStart() {
-		return btnStart;
-	}
+	/**
+	 * Metodo get per il Bottone di inizio
+	 * @return btnStart
+	 */
+	public JButton getBtnStart() { return btnStart; }
 
+	/**
+	 * Metodo get per la TextField della chiave
+	 * @return textField
+	 */
 	public JTextField getTextField() {
 		return textField;
 	}

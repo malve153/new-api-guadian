@@ -1,4 +1,4 @@
-package Model;
+package apiguardian;
 
 import com.opencsv.bean.CsvBindByPosition;
 
@@ -10,7 +10,7 @@ public class Field implements Serializable {
      * Testo dell'articolo
      */
     @CsvBindByPosition(position = 3)
-    String bodyText;
+    private String bodyText;
 
     /**
      * costruttore della classe

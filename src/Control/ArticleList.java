@@ -1,11 +1,8 @@
 package Control;
 
-import Model.Article;
+import apiguardian.Article;
 import Model.Word;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.*;
 
 public class ArticleList {
@@ -31,7 +28,7 @@ public class ArticleList {
         int j = 0;
         ArrayList<String> bannedWords=null;
         try {
-            bannedWords = new txtManager<String>("Resources/stopList.txt").readFile(String.class);
+            bannedWords = new TxtManager<String>("Resources/stopList.txt").readFile(String.class);
         }catch (Exception e){
             e.printStackTrace();
         }

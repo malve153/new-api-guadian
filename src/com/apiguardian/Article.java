@@ -1,9 +1,9 @@
-package Model;
+package apiguardian;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.opencsv.bean.CsvBindByPosition;
 import com.opencsv.bean.CsvRecurse;
-import Model.Field;
+
 import java.io.Serializable;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -13,17 +13,17 @@ public class Article implements Serializable {
    * Id dell'articolo
    */
   @CsvBindByPosition(position = 0)
-  String id;
+  private String id;
   /**
    * Titolo dell'articolo
    */
   @CsvBindByPosition(position = 2)
-  String webTitle;
+  private String webTitle;
   /**
    * Campo contenente il testo dell'articolo
    */
   @CsvRecurse
-  Field fields;
+  private Field fields;
 
   /**
    * Costruttore della classe

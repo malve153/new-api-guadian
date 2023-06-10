@@ -6,7 +6,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.*;
 import Model.Word;
 
-public class txtManager <T>{
+public class TxtManager <T>{
     /**
      * Nome del file in cui salvare o leggere i dati
      */
@@ -21,7 +21,7 @@ public class txtManager <T>{
      * Costruttore della classe
      * @param fileName nome del file
      */
-    public txtManager(String fileName){
+    public TxtManager(String fileName){
         this.fileName=fileName;
     }
 
@@ -49,9 +49,6 @@ public class txtManager <T>{
             fo.close();
         }
         catch(FileNotFoundException e) {}
-
-
-
 
     }
 

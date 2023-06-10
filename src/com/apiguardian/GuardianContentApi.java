@@ -1,7 +1,5 @@
-package Control;
+package apiguardian;
 
-import Model.Article;
-import Model.Response;
 import Control.ResponseWrapper;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.mashape.unirest.http.HttpResponse;

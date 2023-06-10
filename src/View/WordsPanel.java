@@ -18,14 +18,28 @@ import Model.Word;
 
 public class WordsPanel extends JPanel {
 
-	JLabel lbl;
-	JScrollPane scrollPane;
-	JTable table;
-	//JTextArea textArea;
-	JButton btnIndietro;
+	/**
+	 * Etichetta
+	 */
+	private JLabel lbl;
 
 	/**
-	 * Create the panel.
+	 * JScrollPane per la tabella con le parole
+	 */
+	private JScrollPane scrollPane;
+
+	/**
+	 * Tabella con le parole e le rispettive occorrenze
+	 */
+	private JTable table;
+
+	/**
+	 * Bottone per tornare al pannello con le scelte
+	 */
+	private JButton btnIndietro;
+
+	/**
+	 * Costruttore del pannello per la stampa della tabella con le parole e le rispettive occorrenze trovate
 	 */
 	public WordsPanel() {
 
@@ -33,24 +47,18 @@ public class WordsPanel extends JPanel {
 		this.setLayout(null);
 		this.setBounds(100, 100, 600, 320);
 
-		lbl = new JLabel();
-		lbl.setBounds(250, 30, 100, 30);
+		lbl = new JLabel("Parole trovate");
+		lbl.setBounds(260, 15, 100, 30);
 		this.add(lbl);
 
 		scrollPane = new JScrollPane();
 		scrollPane.setBounds(31, 49, 537, 188);
 		this.add(scrollPane);
 
-		/*textArea = new JTextArea();
-		textArea.setEditable(false);
-		scrollPane.setViewportView(textArea);*/
-
 		table = new JTable();
 		scrollPane.setViewportView(table);
 		table.setRowHeight(30);
 		table.setEnabled(false);
-
-
 
 		btnIndietro = new JButton("Indietro");
 		btnIndietro.setBounds(250, 248, 89, 23);
@@ -58,24 +66,21 @@ public class WordsPanel extends JPanel {
 
 	}
 
-	public JButton getBtnIndietro() {
-		return btnIndietro;
-	}
+	/**
+	 * Metodo che torna il bottone per tornare al pannello per la scelta dell'azione
+	 * @return btnIndietro
+	 */
+	public JButton getBtnIndietro() { return btnIndietro; }
 
+	/**
+	 * Metodo che torna la tabella delle parole e delle occorrenze
+	 * @return table tabella delle parole e delle occorrenze
+	 */
+	public JTable getTable() { return table; }
 
-
-	/*public JTextArea getTextArea() {
-		return textArea;
-	}
-
-	public void setTextArea(String words) {
-		this.textArea.setText(words);
-	}*/
-
-	public JTable getTable() {
-		return table;
-	}
-
+	/**
+	 * Metodo che cambia la tabella centrando i campi nelle varie celle
+	 */
 	public void setTable() {
 
 		DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
@@ -87,6 +92,11 @@ public class WordsPanel extends JPanel {
 		//table.getColumn("N°").setPreferredWidth(10);
 	}
 
+	/**
+	 * Metodo che crea la tabella con i campi
+	 * @param word di tipo ArrayList<Word>
+	 * @return modello
+	 */
 	public DefaultTableModel setTable(ArrayList<Word> word) {
 
 		DefaultTableModel modello = new DefaultTableModel();

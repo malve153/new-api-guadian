@@ -6,14 +6,14 @@ import java.util.ArrayList;
 import Model.Word;
 import Control.txtManager;
 
-public class txtManagerTest {
+public class TxtManagerTest {
 
     @Test
     public void saveWordsTest() {
         ArrayList<Word> w1 = new ArrayList<Word>();
         w1.add(new Word("test1",1));
         w1.add(new Word("test2",2));
-        txtManager<Word> t = new txtManager<Word>("50words.txt");
+        TxtManager<Word> t = new TxtManager<Word>("50words.txt");
 
         try {
             t.saveWords(w1);
@@ -27,7 +27,7 @@ public class txtManagerTest {
     public void readWordsTest() {
         ArrayList<Word> w1 = new ArrayList<Word>();
         ArrayList<Word> w2 = new ArrayList<Word>();
-        txtManager<Word> t = new txtManager<Word>("50words.txt");
+        TxtManager<Word> t = new TxtManager<Word>("50words.txt");
 
         w2.add(new Word("test1",1));
         w2.add(new Word("test2",2));

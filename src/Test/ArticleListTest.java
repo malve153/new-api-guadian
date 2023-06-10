@@ -4,8 +4,8 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import java.util.ArrayList;
 import Model.Word;
-import Model.Field;
-import Model.Article;
+import apiguardian.Field;
+import apiguardian.Article;
 import Control.ArticleList;
 
 public class ArticleListTest {

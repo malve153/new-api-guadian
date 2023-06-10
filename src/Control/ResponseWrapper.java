@@ -1,6 +1,6 @@
 package Control;
 
-import Model.Response;
+import apiguardian.Response;
 
 public class ResponseWrapper {
 
@@ -8,6 +8,22 @@ public class ResponseWrapper {
    * Oggetto della classe Response
    */
   private Response response;
+
+  /**
+   * Costruttore della classe
+   * @param response
+   */
+  public ResponseWrapper(final Response response) {
+
+    this.response = response;
+  }
+
+  /**
+   * Costruttore di default
+   */
+  public ResponseWrapper() {
+
+  }
 
   /**
    * Ritorna un oggetto Response
@@ -23,21 +39,5 @@ public class ResponseWrapper {
    */
   public void setResponse(final Response response) {
     this.response = response;
-  }
-
-  /**
-   * costruttore della classe
-   * @param response
-   */
-  public ResponseWrapper(final Response response) {
-
-    this.response = response;
-  }
-
-  /**
-   * Costruttore di default
-   */
-  public ResponseWrapper() {
-
   }
 }

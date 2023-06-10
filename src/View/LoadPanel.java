@@ -10,31 +10,29 @@ import java.io.File;
 
 public class LoadPanel extends JPanel {
 
-    JLabel lbl;
+    /**
+     * Etichetta per l'azione in caricamento
+     */
+    private JLabel lbl;
 
     /**
-     * Create the panel.
+     * Costruttore del pannello di caricamento
      */
     public LoadPanel() {
 
         this.setBorder(new EmptyBorder(5, 5, 5, 5));
         this.setLayout(null);
         this.setBounds(100, 100, 600, 320);
-        try {
-
-            JLabel picLabel=new JLabel(new ImageIcon(new File("Resources/Loading_icon.gif").toURL()));
-
-            picLabel.setBounds(0, 153, 100, 100);
-            add(picLabel);
-        }catch (Exception e){
-            e.printStackTrace();
-        }
         lbl = new JLabel("");
-        lbl.setBounds(100, 153, 312, 14);
+        lbl.setBounds(200, 140, 312, 20);
         this.add(lbl);
 
     }
 
+    /**
+     * Metodo per cambiare la frase dell'etichetta
+     * @param txt Stringa da cambiare nell'etichetta
+     */
     public void setLbl(String txt) {
         this.lbl.setText(txt);
     }

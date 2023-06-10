@@ -3,8 +3,8 @@ package Test;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import java.util.ArrayList;
-import Model.Field;
-import Model.Article;
+import apiguardian.Field;
+import apiguardian.Article;
 import Control.Deserializzatore;
 
 public class DeserializzatoreTest {

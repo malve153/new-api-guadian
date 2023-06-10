@@ -16,13 +16,28 @@ import java.awt.Font;
 
 public class Frame extends JFrame {
 
+	/**
+	 * Pannello iniziale
+	 */
 	private InitialPanel initialPane;
+
+	/**
+	 * Pannello principale dove vengono richieste le azioni da svolgere
+	 */
 	private Panel contentPane;
+
+	/**
+	 * Pannello per mostrare a video la tabella con la stampa delle parole e delle loro rispettive occorrenze
+	 */
 	private WordsPanel wordsPane;
+
+	/**
+	 * Pannello di caricamento
+	 */
 	private LoadPanel loadPane;
 
 	/**
-	 * Create the frame.
+	 * Costruttore della finestra
 	 */
 	public Frame() {
 		try {
@@ -45,22 +60,41 @@ public class Frame extends JFrame {
 
 	}
 
+	/**
+	 * Metodo che ritorna il pannello iniziale
+	 * @return initialPane pannello iniziale
+	 */
 	public InitialPanel getInitialPane() {
 		return initialPane;
 	}
 
+	/**
+	 * Metodo che ritorna il pannello principale
+	 * @return contentPane pannello principale
+	 */
 	public Panel getPanel() {
 		return contentPane;
 	}
 
+	/**
+	 * Metodo che ritorna il pannello di stampa parole e occorrenze
+	 * @return wordsPane pannello stampa parole e occorrenze
+	 */
 	public WordsPanel getWordsPanel() {
 		return wordsPane;
 	}
 
+	/**
+	 * Metodo che ritorna il pannello di caricamento
+	 * @return loadPane pannello di caricamento
+	 */
 	public LoadPanel getLoadPanel() {
 		return loadPane;
 	}
 
+	/**
+	 * Metodo che cambia il pannello iniziale nel pannello principale
+	 */
 	public void changeInitialPanel() {
 		this.remove(initialPane);
 		this.invalidate();
@@ -71,6 +105,9 @@ public class Frame extends JFrame {
 
 	}
 
+	/**
+	 * Metodo che cambia il pannello principale nel pannello di stampa parole e occorrenze
+	 */
 	public void changePanel() {
 		this.remove(contentPane);
 		this.invalidate();
@@ -81,6 +118,9 @@ public class Frame extends JFrame {
 
 	}
 
+	/**
+	 * Metodo che cambia il pannello di stampa parole e occorrenze nel pannello principale
+	 */
 	public void changeWordsPanel() {
 		this.remove(wordsPane);
 		this.invalidate();
@@ -89,6 +129,9 @@ public class Frame extends JFrame {
 		this.revalidate();
 	}
 
+	/**
+	 * Metodo che cambia il pannello principale nel pannello di caricamento
+	 */
 	public void changePanelToLoadPanel() {
 		this.remove(contentPane);
 		this.invalidate();
@@ -97,6 +140,9 @@ public class Frame extends JFrame {
 		this.revalidate();
 	}
 
+	/**
+	 * Metodo che cambia il pannello di caricamento nel pannello di stampa parole e occorrenze
+	 */
 	public void changeLoadPanelToWordsPanel() {
 		this.remove(loadPane);
 		this.invalidate();
@@ -105,6 +151,9 @@ public class Frame extends JFrame {
 		this.revalidate();
 	}
 
+	/**
+	 * Metodo che cambia il pannello di caricamento nel pannello principale
+	 */
 	public void changeLoadPanelToPanel() {
 		this.remove(loadPane);
 		this.invalidate();

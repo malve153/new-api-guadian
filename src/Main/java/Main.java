@@ -1,13 +1,10 @@
 
 
 import Control.Control;
-import Control.Deserializzatore;
-import Model.Field;
 
 import java.awt.EventQueue;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
-import java.util.ArrayList;
 
 public class Main {
 	/**

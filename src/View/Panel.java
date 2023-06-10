@@ -11,13 +11,38 @@ import javax.swing.border.EmptyBorder;
 
 public class Panel extends JPanel {
 
-	JLabel lblNewLabel;
-	private final ButtonGroup buttonGroup;
-	JRadioButton rdbtnDownload, rdbtnTermini, rdbtnDownloadTermini;
-	JButton btnInvio, btnStart;
+	/**
+	 * Etichetta delle scelte
+	 */
+	private JLabel lbl;
 
 	/**
-	 * Create the panel.
+	 * Raggruppa i 3 JRadioButton
+	 */
+	private final ButtonGroup buttonGroup;
+
+	/**
+	 * JRadioButton per il download degli articoli
+	 */
+	private JRadioButton rdbtnDownload;
+
+	/**
+	 * JRadioButton per l'estrazione dei termini
+	 */
+	private JRadioButton rdbtnTermini;
+
+	/**
+	 * JRadioButton per il download degli articoli e l'estrazione dei termini
+	 */
+	private JRadioButton rdbtnDownloadTermini;
+
+	/**
+	 * Bottone per eseguire l'azione scelta
+	 */
+	private JButton btnInvio;
+
+	/**
+	 * Costruttore del pannello principale
 	 */
 	public Panel() {
 		//setContentPane(contentPane);
@@ -29,10 +54,10 @@ public class Panel extends JPanel {
 
 		buttonGroup = new ButtonGroup();
 
-		lblNewLabel = new JLabel("Scegliere una delle possibili azioni e premere 'INVIO': ");
-		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 12));
-		lblNewLabel.setBounds(34, 58, 400, 14);
-		this.add(lblNewLabel);
+		lbl = new JLabel("Scegliere una delle possibili azioni e premere 'INVIO': ");
+		lbl.setFont(new Font("Tahoma", Font.BOLD, 12));
+		lbl.setBounds(34, 58, 400, 14);
+		this.add(lbl);
 
 		rdbtnDownload = new JRadioButton("Download articoli");
 		rdbtnDownload.setBounds(44, 90, 300, 23);
@@ -56,18 +81,34 @@ public class Panel extends JPanel {
 
 	}
 
+	/**
+	 * Meotodo che torna il JRadioButton per i download
+	 * @return rdbtnDownload
+	 */
 	public JRadioButton getRdbtnDownload() {
 		return rdbtnDownload;
 	}
 
+	/**
+	 * Meotodo che torna il JRadioButton per l'estrazione termini
+	 * @return rdbtnTermini
+	 */
 	public JRadioButton getRdbtnTermini() {
 		return rdbtnTermini;
 	}
 
+	/**
+	 * Meotodo che torna il JRadioButton per i download e l'estrazione termini
+	 * @return rdbtnDownloadTermini
+	 */
 	public JRadioButton getRdbtnDownloadTermini() {
 		return rdbtnDownloadTermini;
 	}
 
+	/**
+	 * Meotodo che torna il bottono per eseguire l'azione scelta
+	 * @return btnInvio
+	 */
 	public JButton getBtnInvio() {
 		return btnInvio;
 	}

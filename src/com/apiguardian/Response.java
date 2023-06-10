@@ -1,42 +1,51 @@
-package Model;
+package apiguardian;
 
 public class Response {
+
   /**
    * Sringa che indica lo stato della risposta dell'API Guardian
    */
-  String status;
+  private String status;
+
   /**
    * Stringa che indica il livello dell'utente
    */
-  String userTier;
+  private String userTier;
+
   /**
    * Numero di risultati disponibili
    */
-  int total;
+  private int total;
+
   /**
    * Indice di partenza
    */
-  int startIndex;
+  private int startIndex;
+
   /**
    * Numero di elementi restituiti
    */
-  int pageSize;
+  private int pageSize;
+
   /**
    * Numero della pagina attuale
    */
-  int currentPage;
+  private int currentPage;
+
   /**
    * Quantità totale di pagine presenti nella chiamata
    */
-  int pages;
+  private int pages;
+
   /**
    * Ordinamento utilizzato
    */
-  String orderBy;
+  private String orderBy;
+
   /**
    * Array che conterrà gli articoli
    */
-  Article[] results;
+  private Article[] results;
 
   /**
    * Costruttore di default
