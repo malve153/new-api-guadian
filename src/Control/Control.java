@@ -83,7 +83,7 @@ public class Control implements WindowListener, ActionListener {
 			if(frame.getPanel().getRdbtnDownload().isSelected()) {
 				//solo download
 
-				opz = JOptionPane.showConfirmDialog(frame, "Vuoi cercare articoli con una parola in particolare?", "Ricerca termini", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
+				opz = JOptionPane.showConfirmDialog(frame, "Vuoi cercare articoli con una parola in particolare? Se si preme no verranno scaricati gli artioli riguardanti l'energia nucleare", "Ricerca termini", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
 
 				if (opz == 0) {
 					term = JOptionPane.showInputDialog(frame, "Che termine vuoi cercare?");
@@ -106,6 +106,8 @@ public class Control implements WindowListener, ActionListener {
 							if (a == null) {
 								JOptionPane.showMessageDialog(frame,
 										"Parola inserita non presente in alcun articolo", "Richiesta fallita", JOptionPane.ERROR_MESSAGE);
+								frame.changeLoadPanelToPanel();
+
 							} else {
 								frame.getLoadPanel().setLbl("salvataggio articoli in corso...");
 								new Serializzatore("Resources/Word.txt").writeObj(a);
@@ -130,7 +132,7 @@ public class Control implements WindowListener, ActionListener {
 			else if(frame.getPanel().getRdbtnDownloadTermini().isSelected()) {
 				//entrambe
 
-				opz = JOptionPane.showConfirmDialog(frame, "Vuoi cercare articoli con una parola in particolare?", "Ricerca termini", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
+				opz = JOptionPane.showConfirmDialog(frame, "Vuoi cercare articoli con una parola in particolare? Se si preme no verranno scaricati gli artioli riguardanti l'energia nucleare", "Ricerca termini", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
 
 
 				if(opz==0) {
@@ -156,6 +158,7 @@ public class Control implements WindowListener, ActionListener {
 							if(a==null){
 								JOptionPane.showMessageDialog(frame,
 										"Parola inserita non presente in alcun articolo", "Richiesta fallita", JOptionPane.ERROR_MESSAGE);
+								frame.changeLoadPanelToPanel();
 							}
 							else {
 								frame.getLoadPanel().setLbl("calcolo occorrenze delle parole...");

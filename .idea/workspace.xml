@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a27e7b7-091f-4fc4-9e36-f9fca2104db4" name="Changes" comment="Aggiunti commenti secondo javadoc">
+    <list default="true" id="1a27e7b7-091f-4fc4-9e36-f9fca2104db4" name="Changes" comment="aggiunta documentazione casi d'uso">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/50words.txt" beforeDir="false" afterPath="$PROJECT_DIR$/50words.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Word.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Word.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Control/Control.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/Control.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +42,9 @@
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -139,6 +145,7 @@
       <workItem from="1686226702394" duration="8658000" />
       <workItem from="1686384565743" duration="5545000" />
       <workItem from="1686400038424" duration="4821000" />
+      <workItem from="1686471259912" duration="525000" />
     </task>
     <task id="LOCAL-00001" summary="codice per scaricare 1000 articoli per argomento, messaggio di errore se non viene scaricato nessun articolo">
       <created>1685527263138</created>
@@ -161,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686234775019</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="aggiunta documentazione casi d'uso">
+      <created>1686470823186</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1686470823186</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,11 +191,13 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="codice per scaricare 1000 articoli per argomento, messaggio di errore se non viene scaricato nessun articolo" />
     <MESSAGE value="aggiunta gestione apostrofo negli articoli e miglioramento bug grafica" />
     <MESSAGE value="Aggiunti commenti secondo javadoc" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aggiunti commenti secondo javadoc" />
+    <MESSAGE value="aggiunta documentazione casi d'uso" />
+    <option name="LAST_COMMIT_MESSAGE" value="aggiunta documentazione casi d'uso" />
   </component>
 </project>
