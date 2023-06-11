@@ -7,7 +7,7 @@ import java.awt.event.WindowListener;
 import java.util.ArrayList;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
-
+import Control.GuardianContentApi;
 import javax.swing.*;
 
 import Model.Article;
@@ -17,6 +17,7 @@ import View.Frame;
 public class Control implements WindowListener, ActionListener {
 
 	Frame frame;
+	private GuardianContentApi guardianResponse;
 
 	public Control() {
 		frame = new Frame();
@@ -73,12 +74,11 @@ public class Control implements WindowListener, ActionListener {
 		String term=null;
 
 		if(e.getSource() == frame.getInitialPane().getBtnStart()) {
+			guardianResponse=new GuardianContentApi(frame.getInitialPane().getTextField().getText());
 			frame.changeInitialPanel();
 			frame.getPanel().getBtnInvio().addActionListener(this);
 		}
 		else if(e.getSource() == frame.getPanel().getBtnInvio()) {
-
-			GuardianContentApi res=new GuardianContentApi("f26c6407-afa1-47c4-8eb3-a671a18f628c");
 
 			if(frame.getPanel().getRdbtnDownload().isSelected()) {
 				//solo download
@@ -102,7 +102,7 @@ public class Control implements WindowListener, ActionListener {
 						try {
 							frame.changePanelToLoadPanel();
 							frame.getLoadPanel().setLbl("sto scaricando gli articoli...");
-							Article a[] = res.getContent(finalTerm1);
+							Article a[] = guardianResponse.getContent(finalTerm1);
 							if (a == null) {
 								JOptionPane.showMessageDialog(frame,
 										"Parola inserita non presente in alcun articolo", "Richiesta fallita", JOptionPane.ERROR_MESSAGE);
@@ -116,13 +116,13 @@ public class Control implements WindowListener, ActionListener {
 						}
 						catch (Exception e1){
 							JOptionPane.showMessageDialog(frame,
-									"Errore durante l'esecuzione", "Operazione fallita", JOptionPane.ERROR_MESSAGE);
+									"Errore durante l'esecuzione! Verificare di aver inserito la chiave corretta e di essere connessi alla rete", "Operazione fallita", JOptionPane.ERROR_MESSAGE);
 							frame.changeLoadPanelToPanel();
 						}
 					}).start();
 				} catch (Exception e1) {
 					JOptionPane.showMessageDialog(frame,
-							"Errore durante l'esecuzione", "Operazione fallita", JOptionPane.ERROR_MESSAGE);
+							"Errore durante l'esecuzione! Verificare di aver inserito la chiave corretta e di essere connessi alla rete", "Operazione fallita", JOptionPane.ERROR_MESSAGE);
 				}
 
 
@@ -137,7 +137,6 @@ public class Control implements WindowListener, ActionListener {
 					term = JOptionPane.showInputDialog(frame, "Che termine vuoi cercare?");
 
 				} else if(opz==1) {
-					//continua con solo estrazione termini
 					term="nuclear power";
 				}
 				else {
@@ -153,7 +152,7 @@ public class Control implements WindowListener, ActionListener {
 							frame.changePanelToLoadPanel();
 							frame.getLoadPanel().setLbl("sto scaricando gli articoli...");
 							ArrayList<Word> words=null;
-							Article a[] = res.getContent(finalTerm);
+							Article a[] = guardianResponse.getContent(finalTerm);
 							if(a==null){
 								JOptionPane.showMessageDialog(frame,
 										"Parola inserita non presente in alcun articolo", "Richiesta fallita", JOptionPane.ERROR_MESSAGE);
@@ -177,7 +176,7 @@ public class Control implements WindowListener, ActionListener {
 							}
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(frame,
-									"Errore durante l'esecuzione", "Operazione fallita", JOptionPane.ERROR_MESSAGE);
+									"Errore durante l'esecuzione! Verificare di aver inserito la chiave corretta e di essere connessi alla rete", "Operazione fallita", JOptionPane.ERROR_MESSAGE);
 							frame.changeLoadPanelToPanel();
 						}
 
@@ -189,7 +188,7 @@ public class Control implements WindowListener, ActionListener {
 
 				} catch (Exception e1){
 					JOptionPane.showMessageDialog(frame,
-							"Errore durante l'esecuzione", "Operazione fallita", JOptionPane.ERROR_MESSAGE);
+							"Errore durante l'esecuzione! Verificare di aver inserito la chiave corretta e di essere connessi alla rete", "Operazione fallita", JOptionPane.ERROR_MESSAGE);
 				}
 
 
