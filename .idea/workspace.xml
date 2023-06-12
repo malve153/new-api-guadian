@@ -9,19 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a27e7b7-091f-4fc4-9e36-f9fca2104db4" name="Changes" comment="TxtManager con la T maiuscola e risoluzione bug nel control">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/50words.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione/Class Diagram/ClassDiagram.drawio" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Word.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Control/ArticleList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ArticleList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Control/Control.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/Control.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Control/TxtManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/TxtManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Frame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/LoadPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/LoadPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/WordsPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/WordsPanel.java" afterDir="false" />
-    </list>
+    <list default="true" id="1a27e7b7-091f-4fc4-9e36-f9fca2104db4" name="Changes" comment="aggiunta readme, file .jar, rimozione librerie non utlizzate" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -166,6 +154,7 @@
       <workItem from="1686471259912" duration="525000" />
       <workItem from="1686555582363" duration="1303000" />
       <workItem from="1686571458619" duration="10468000" />
+      <workItem from="1686585017138" duration="660000" />
     </task>
     <task id="LOCAL-00001" summary="codice per scaricare 1000 articoli per argomento, messaggio di errore se non viene scaricato nessun articolo">
       <created>1685527263138</created>
@@ -202,7 +191,21 @@
       <option name="project" value="LOCAL" />
       <updated>1686556237463</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="aggiunta readme, file .jar, rimozione librerie non utlizzate">
+      <created>1686585091202</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1686585091202</updated>
+    </task>
+    <task id="LOCAL-00007" summary="aggiunta readme, file .jar, rimozione librerie non utlizzate">
+      <created>1686585140756</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1686585140756</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,6 +229,7 @@
     <MESSAGE value="Aggiunti commenti secondo javadoc" />
     <MESSAGE value="aggiunta documentazione casi d'uso" />
     <MESSAGE value="TxtManager con la T maiuscola e risoluzione bug nel control" />
-    <option name="LAST_COMMIT_MESSAGE" value="TxtManager con la T maiuscola e risoluzione bug nel control" />
+    <MESSAGE value="aggiunta readme, file .jar, rimozione librerie non utlizzate" />
+    <option name="LAST_COMMIT_MESSAGE" value="aggiunta readme, file .jar, rimozione librerie non utlizzate" />
   </component>
 </project>
