@@ -33,11 +33,13 @@ Per creare questo progetto maven in IntelliJ IDEA eseguire i seguenti passi:
 6. Cliccare run ed eseguire il programma
 
 ### Eseguire il file .jar
-Eseguire nella cartella out/artifacts/new_api_guardian_jar il comando
+Eseguire nella cartella principale del progetto il comando in Windows
 
-    java -jar new-api-guadian.jar
-oppure fare doppio clic sopra il file .jar
+    java -jar out\artifacts\new_api_guadian_jar\new-api-guadian.jar
 
+o in Linux
+
+    java -jar out/artifacts/new_api_guadian_jar/new-api-guadian.jar
 
 ### Librerie esterne utilizzate
 

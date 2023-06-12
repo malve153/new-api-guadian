@@ -9,7 +9,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a27e7b7-091f-4fc4-9e36-f9fca2104db4" name="Changes" comment="aggiunta readme, file .jar, rimozione librerie non utlizzate" />
+    <list default="true" id="1a27e7b7-091f-4fc4-9e36-f9fca2104db4" name="Changes" comment="nuovo jar">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/new_api_guadian_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/new_api_guadian_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione/Progetto eis.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/Documentazione/Progetto eis.pptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/articles.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/articles.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/50words.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/50words.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/new_api_guadian_jar/new-api-guadian.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/new_api_guadian_jar/new-api-guadian.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Control/META-INF/MANIFEST.MF" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -154,7 +163,9 @@
       <workItem from="1686471259912" duration="525000" />
       <workItem from="1686555582363" duration="1303000" />
       <workItem from="1686571458619" duration="10468000" />
-      <workItem from="1686585017138" duration="660000" />
+      <workItem from="1686585017138" duration="1956000" />
+      <workItem from="1686587167134" duration="399000" />
+      <workItem from="1686587773424" duration="348000" />
     </task>
     <task id="LOCAL-00001" summary="codice per scaricare 1000 articoli per argomento, messaggio di errore se non viene scaricato nessun articolo">
       <created>1685527263138</created>
@@ -205,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686585140756</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="nuovo jar">
+      <created>1686585722522</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1686585722522</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,6 +248,7 @@
     <MESSAGE value="aggiunta documentazione casi d'uso" />
     <MESSAGE value="TxtManager con la T maiuscola e risoluzione bug nel control" />
     <MESSAGE value="aggiunta readme, file .jar, rimozione librerie non utlizzate" />
-    <option name="LAST_COMMIT_MESSAGE" value="aggiunta readme, file .jar, rimozione librerie non utlizzate" />
+    <MESSAGE value="nuovo jar" />
+    <option name="LAST_COMMIT_MESSAGE" value="nuovo jar" />
   </component>
 </project>
