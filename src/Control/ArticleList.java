@@ -33,7 +33,6 @@ public class ArticleList {
             e.printStackTrace();
         }
 
-        long l = System.currentTimeMillis();
         for (int i = 0; i < articles.length; i++) {
 
             fullText = articles[i].getWebTitle() + " " + articles[i].getFields().getBodyText();
@@ -45,13 +44,13 @@ public class ArticleList {
 
                 key = st.nextToken();
 
-                key = key.replaceAll("[,.;:?!(){}^'’\n\"“” ]", "");
+                key = key.replaceAll("[,.;:?!(){}^“”…♦¶’'’\n\"“” ]", "");
                 key = key.replace("[", "");
                 key = key.replace("]", "");
 
                 key = key.toLowerCase();
 
-                if(key.length()!=0 && key.compareTo("–")!=0 && !bannedWords.contains(key)) {
+                if(key.length()!=0 && key.compareTo("—")!=0 && key.compareTo("-")!=0 &&  key.compareTo("–")!=0 &&!bannedWords.contains(key)) {
 
                     map1.put(key, map.getOrDefault(key, 1));
                 }
@@ -71,7 +70,6 @@ public class ArticleList {
         }
 
         Collections.sort(al, new Word());
-        System.out.println("valore al termine del ciclo" + (System.currentTimeMillis() - l));
 
         return al;
     }

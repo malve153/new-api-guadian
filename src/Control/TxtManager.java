@@ -42,11 +42,8 @@ public class TxtManager <T>{
             i++;
         }
         System.out.println(file);
-        try{
-            FileOutputStream fo = new FileOutputStream("50words.txt");
+        try(FileOutputStream fo = new FileOutputStream("50words.txt")){
             fo.write(file.getBytes());
-
-            fo.close();
         }
         catch(FileNotFoundException e) {}
 

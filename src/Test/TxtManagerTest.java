@@ -4,7 +4,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import java.util.ArrayList;
 import Model.Word;
-import Control.txtManager;
+import Control.TxtManager;
 
 public class TxtManagerTest {
 

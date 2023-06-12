@@ -39,7 +39,7 @@ public class DeserializzatoreTest {
         a1.add(new Article("0","Test",new Field("This is a test.")));
 
         try{
-            a2=d.deserializeCSV();
+            a2=d.deserialize();
         }
         catch (Exception e){
             fail("Operation Failed: "+e.getMessage());

@@ -48,15 +48,12 @@ public class Deserializzatore {
      * @return Arraylist di articoli
      * @throws IOException
      */
-    public ArrayList<Article> deserializeTxt() throws IOException {
-        ArrayList<Article> art=new ArrayList(NUMERO_ARTICOLI);
+    private ArrayList<Article> deserializeTxt() throws IOException {
         ObjectMapper objectMapper = new ObjectMapper();
 
-        art = objectMapper.readValue(new File(fileName), new TypeReference<ArrayList<Article>>(){});
+        ArrayList<Article> art = objectMapper.readValue(new File(fileName), new TypeReference<ArrayList<Article>>(){});
 
-
-
-        return art;
+        return checkNumberArticle(art);
     }
 
     /**
@@ -64,13 +61,30 @@ public class Deserializzatore {
      * @return Arraylist di articoli
      * @throws IOException
      */
-    public ArrayList<Article> deserializeCSV() throws IOException {
+    private ArrayList<Article> deserializeCSV() throws IOException {
 
-        ArrayList<Article> beans = (ArrayList<Article>) new CsvToBeanBuilder(new FileReader(fileName))
+        ArrayList<Article> art = (ArrayList<Article>) new CsvToBeanBuilder(new FileReader(fileName))
                 .withType(Article.class)
                 .build()
                 .parse();
 
-        return beans;
+        return checkNumberArticle(art);
     }
+
+    /**
+     * Metodo per controllare che il numero di articoli letti sia minore di mille
+     * @param art
+     * @return Arraylist di article
+     */
+    private ArrayList<Article> checkNumberArticle(ArrayList<Article> art) {
+        if(art.size()>NUMERO_ARTICOLI){
+            ArrayList<Article> a=new ArrayList<>(NUMERO_ARTICOLI);
+            for (int i=0;i<=NUMERO_ARTICOLI;i++){
+                a.add(art.get(i));
+            }
+            return a;
+        }
+        return art;
+    }
+
 }

@@ -130,7 +130,9 @@ public class Control implements WindowListener, ActionListener {
 
 				if (opz == 0) {
 					term = JOptionPane.showInputDialog(frame, "Che termine vuoi cercare?");
-
+					if (term == null) {
+						return;
+					}
 				} else if (opz == 1) {
 					term = "nuclear power";
 
@@ -180,7 +182,9 @@ public class Control implements WindowListener, ActionListener {
 
 				if(opz==0) {
 					term = JOptionPane.showInputDialog(frame, "Che termine vuoi cercare?");
-
+					if (term == null) {
+						return;
+					}
 				} else if(opz==1) {
 					term="nuclear power";
 				}
