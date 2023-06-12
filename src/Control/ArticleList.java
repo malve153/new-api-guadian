@@ -5,6 +5,7 @@ import Model.Word;
 
 import java.util.*;
 
+
 public class ArticleList {
     /**
      * Costante con numero di parole che verranno mostrate all'utente

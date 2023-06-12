@@ -9,20 +9,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a27e7b7-091f-4fc4-9e36-f9fca2104db4" name="Changes" comment="aggiunto cambio pannello se la parola inserita nella ricerca non esiste">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/new_api_guadian_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/new_api_guadian_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2023_10_38__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2023_10_38__Changes_.xml" afterDir="false" />
+    <list default="true" id="1a27e7b7-091f-4fc4-9e36-f9fca2104db4" name="Changes" comment="TxtManager con la T maiuscola e risoluzione bug nel control">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/50words.txt" beforeDir="false" afterPath="$PROJECT_DIR$/50words.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Word.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Word.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/new_api_guadian_jar/new-api-guadian.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/50words.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione/Class Diagram/ClassDiagram.drawio" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Word.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Control/ArticleList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ArticleList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Control/Control.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/Control.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Control/Deserializzatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/Deserializzatore.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Control/TxtManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/TxtManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/java/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test/DeserializzatoreTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/DeserializzatoreTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test/TxtManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/TxtManagerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Frame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/LoadPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/LoadPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/WordsPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/WordsPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,9 +58,11 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../demo-project" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -164,7 +164,8 @@
       <workItem from="1686384565743" duration="5545000" />
       <workItem from="1686400038424" duration="4821000" />
       <workItem from="1686471259912" duration="525000" />
-      <workItem from="1686555582363" duration="565000" />
+      <workItem from="1686555582363" duration="1303000" />
+      <workItem from="1686571458619" duration="10468000" />
     </task>
     <task id="LOCAL-00001" summary="codice per scaricare 1000 articoli per argomento, messaggio di errore se non viene scaricato nessun articolo">
       <created>1685527263138</created>
@@ -194,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686470823186</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="TxtManager con la T maiuscola e risoluzione bug nel control">
+      <created>1686556237463</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1686556237463</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,6 +225,7 @@
     <MESSAGE value="aggiunta gestione apostrofo negli articoli e miglioramento bug grafica" />
     <MESSAGE value="Aggiunti commenti secondo javadoc" />
     <MESSAGE value="aggiunta documentazione casi d'uso" />
-    <option name="LAST_COMMIT_MESSAGE" value="aggiunta documentazione casi d'uso" />
+    <MESSAGE value="TxtManager con la T maiuscola e risoluzione bug nel control" />
+    <option name="LAST_COMMIT_MESSAGE" value="TxtManager con la T maiuscola e risoluzione bug nel control" />
   </component>
 </project>

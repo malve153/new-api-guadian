@@ -1,12 +1,8 @@
 package View;
 
-import com.fasterxml.jackson.core.io.MergedStream;
-
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
-import java.awt.image.BufferedImage;
-import java.io.File;
+
 
 public class LoadPanel extends JPanel {
 

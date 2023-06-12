@@ -155,7 +155,7 @@ public class Control implements WindowListener, ActionListener {
 
 							} else {
 								frame.getLoadPanel().setLbl("Salvataggio articoli in corso...");
-								new Serializzatore("Resources/Word.txt").writeObj(a);
+								new Serializzatore("Resources/articles.txt").writeObj(a);
 								frame.changeLoadPanelToPanel();
 								JOptionPane.showMessageDialog(frame, "Download avvenuto con successo!", "Download articoli", JOptionPane.INFORMATION_MESSAGE, null);
 
@@ -212,8 +212,8 @@ public class Control implements WindowListener, ActionListener {
 								words=ArticleList.mappingArticlesAmount(a);
 								frame.getLoadPanel().setLbl("Salvataggio in corso...");
 
-								new Serializzatore("Resources/Word.txt").writeObj(a);
-								new TxtManager<Word>("Word.txt").saveWords(words);
+								new Serializzatore("Resources/articles.txt").writeObj(a);
+								new TxtManager<Word>("out/50words.txt").saveWords(words);
 								frame.getLoadPanel().setLbl("Salvataggio terminato...");
 								opz2.set(JOptionPane.showConfirmDialog(frame, "Vuoi stampare i termini a video?", "Termini", JOptionPane.YES_NO_OPTION));
 
@@ -254,7 +254,7 @@ public class Control implements WindowListener, ActionListener {
 					if (selezione == 0) {
 						fileName="Resources/nytimes_articles_v2.csv";
 					} else if (selezione == 1) {
-						fileName="Resources/Word.txt";
+						fileName="Resources/articles.txt";
 					}
 					frame.changePanelToLoadPanel();
 					frame.getLoadPanel().setLbl("Sto caricando gli articoli...");
@@ -268,7 +268,7 @@ public class Control implements WindowListener, ActionListener {
 							frame.getLoadPanel().setLbl("Calcolo occorrenze delle parole...");
 							ArrayList<Word> words = ArticleList.mappingArticlesAmount(a);
 							frame.getLoadPanel().setLbl("Salvataggio dei dati in corso...");
-							new TxtManager("Resources/Word.txt").saveWords(words);
+							new TxtManager("out/50words.txt").saveWords(words);
 							frame.getLoadPanel().setLbl("Salvataggio terminato...");
 							opz2.set(JOptionPane.showConfirmDialog(frame, "Vuoi stampare i termini a video?", "Termini", JOptionPane.YES_NO_OPTION));
 

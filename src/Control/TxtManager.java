@@ -1,21 +1,20 @@
 package Control;
 
 import java.io.*;
-import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.util.*;
-import Model.Word;
 
 public class TxtManager <T>{
-    /**
-     * Nome del file in cui salvare o leggere i dati
-     */
-    private String fileName;
 
     /**
      * Numero di parole da stampare/visualizzare
      */
     private static final int NUMERO_PAROLE=50;
+
+    /**
+     * Nome del file in cui salvare o leggere i dati
+     */
+    private String fileName;
 
     /**
      * Costruttore della classe
@@ -35,14 +34,14 @@ public class TxtManager <T>{
         int i=0;
         String file="";
 
-        while(i<word.size() && i<50) {
+        while(i<word.size() && i<NUMERO_PAROLE) {
             file += word.get(i);
 
-            if(i!=49) file += "\n";
+            if(i!=NUMERO_PAROLE-1) file += "\n";
             i++;
         }
-        System.out.println(file);
-        try(FileOutputStream fo = new FileOutputStream("50words.txt")){
+
+        try(FileOutputStream fo = new FileOutputStream(fileName)){
             fo.write(file.getBytes());
         }
         catch(FileNotFoundException e) {}

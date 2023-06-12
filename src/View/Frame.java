@@ -1,18 +1,8 @@
 package View;
 
 import com.formdev.flatlaf.FlatLightLaf;
-
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
 import javax.swing.*;
 
-import javax.swing.border.EmptyBorder;
-import java.awt.FlowLayout;
-import java.awt.event.WindowEvent;
-import java.awt.event.WindowListener;
-
-import java.awt.Font;
 
 public class Frame extends JFrame {
 
