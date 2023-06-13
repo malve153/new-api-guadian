@@ -4,11 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a27e7b7-091f-4fc4-9e36-f9fca2104db4" name="Changes" comment="aggiunta documentazione casi d'uso">
+    <list default="true" id="1a27e7b7-091f-4fc4-9e36-f9fca2104db4" name="Changes" comment="aggiunto domain model, correzione readme">
+      <change afterPath="$PROJECT_DIR$/Documentazione/Class Diagram/DesignModel.drawio" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentazione/Class Diagram/DesignModel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentazione/Class Diagram/DomainModel.drawio" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentazione/Class Diagram/DomainModel.drawio.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2023_10_38__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2023_10_38__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2023_11_21__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2023_11_21__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione/Class Diagram/ClassDiagram(2).drawio" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione/Class Diagram/ClassDiagram.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -158,7 +164,7 @@
       <workItem from="1686471259912" duration="525000" />
       <workItem from="1686566652954" duration="1312000" />
       <workItem from="1686660174963" duration="290000" />
-      <workItem from="1686660754589" duration="1768000" />
+      <workItem from="1686660754589" duration="2298000" />
     </task>
     <task id="LOCAL-00001" summary="codice per scaricare 1000 articoli per argomento, messaggio di errore se non viene scaricato nessun articolo">
       <created>1685527263138</created>
@@ -188,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686470823186</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="aggiunto domain model, correzione readme">
+      <created>1686663126281</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1686663126282</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,6 +223,7 @@
     <MESSAGE value="aggiunta gestione apostrofo negli articoli e miglioramento bug grafica" />
     <MESSAGE value="Aggiunti commenti secondo javadoc" />
     <MESSAGE value="aggiunta documentazione casi d'uso" />
-    <option name="LAST_COMMIT_MESSAGE" value="aggiunta documentazione casi d'uso" />
+    <MESSAGE value="aggiunto domain model, correzione readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="aggiunto domain model, correzione readme" />
   </component>
 </project>
