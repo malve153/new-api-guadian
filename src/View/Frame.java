@@ -45,6 +45,8 @@ public class Frame extends JFrame {
 
 		this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 		this.setVisible(true);
+
+		contentPane = new Panel();
 		wordsPane=new WordsPanel();
 		loadPane=new LoadPanel();
 
@@ -88,9 +90,8 @@ public class Frame extends JFrame {
 	public void changeInitialPanel() {
 		this.remove(initialPane);
 		this.invalidate();
-		contentPane = new Panel();
 		this.setContentPane(contentPane);
-		this.setResizable(true);
+		this.setResizable(false);
 		this.revalidate();
 
 	}
@@ -101,9 +102,8 @@ public class Frame extends JFrame {
 	public void changePanel() {
 		this.remove(contentPane);
 		this.invalidate();
-		//wordsPane = new WordsPanel();
 		this.setContentPane(wordsPane);
-		this.setResizable(true);
+		this.setResizable(false);
 		this.revalidate();
 
 	}
@@ -115,7 +115,7 @@ public class Frame extends JFrame {
 		this.remove(wordsPane);
 		this.invalidate();
 		this.setContentPane(contentPane);
-		this.setResizable(true);
+		this.setResizable(false);
 		this.revalidate();
 	}
 
@@ -126,7 +126,7 @@ public class Frame extends JFrame {
 		this.remove(contentPane);
 		this.invalidate();
 		this.setContentPane(loadPane);
-		this.setResizable(true);
+		this.setResizable(false);
 		this.revalidate();
 	}
 
@@ -137,7 +137,7 @@ public class Frame extends JFrame {
 		this.remove(loadPane);
 		this.invalidate();
 		this.setContentPane(wordsPane);
-		this.setResizable(true);
+		this.setResizable(false);
 		this.revalidate();
 	}
 
@@ -148,7 +148,7 @@ public class Frame extends JFrame {
 		this.remove(loadPane);
 		this.invalidate();
 		this.setContentPane(contentPane);
-		this.setResizable(true);
+		this.setResizable(false);
 		this.revalidate();
 	}
 
