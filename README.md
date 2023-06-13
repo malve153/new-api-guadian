@@ -1,7 +1,7 @@
 # Progetto ApiGuardian
 
-Il programma permette di scaricare articoli dal sito del The Guardian e/o di estrarre i cinquanta termini più importanti, o da questa prima fonte, o da un insieme di pezzi del New York Times di cui è già stato effettuato il download. 
-L'utente deve prima aver ottenuto una chiave valida dal sito del The Guardian da inserire nell'apposito spazio nella schermata iniziale per poter utilizzare le funzionalità dell'api, altrimenti può utilizzare solo i testi già presenti del New York Times lasciando il campo vuoto. 
+Il programma permette di scaricare articoli dal sito del The Guardian e/o di estrarre i cinquanta termini più frequenti o da questa prima fonte, o da un insieme di notizie del New York Times di cui è già stato effettuato il download. 
+L'utente deve prima ottenere una chiave valida dal sito del The Guardian da inserire nell'apposito spazio nella schermata iniziale per poter utilizzare le funzionalità dell'api, altrimenti può utilizzare solo i testi già presenti del New York Times lasciando il campo vuoto. 
 Successivamente vengono visualizzate a schermo tre opzioni tra cui poter scegliere:
 - Download articoli
 - Estrazione termini
