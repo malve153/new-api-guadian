@@ -1,23 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ArtifactsWorkspaceSettings">
-    <artifacts-to-build>
-      <artifact name="new-api-guadian:jar" />
-    </artifacts-to-build>
-  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a27e7b7-091f-4fc4-9e36-f9fca2104db4" name="Changes" comment="nuovo jar">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/new_api_guadian_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/new_api_guadian_jar.xml" afterDir="false" />
+    <list default="true" id="1a27e7b7-091f-4fc4-9e36-f9fca2104db4" name="Changes" comment="aggiunta documentazione casi d'uso">
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2023_10_38__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2023_10_38__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2023_11_21__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2023_11_21__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione/Progetto eis.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/Documentazione/Progetto eis.pptx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/articles.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/articles.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/50words.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/50words.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/new_api_guadian_jar/new-api-guadian.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/new_api_guadian_jar/new-api-guadian.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Control/META-INF/MANIFEST.MF" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +34,9 @@
       </UrlAndAccount>
     </option>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="ProjectErrors" />
   </component>
@@ -51,16 +46,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../demo-project" />
-    <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -161,11 +156,9 @@
       <workItem from="1686384565743" duration="5545000" />
       <workItem from="1686400038424" duration="4821000" />
       <workItem from="1686471259912" duration="525000" />
-      <workItem from="1686555582363" duration="1303000" />
-      <workItem from="1686571458619" duration="10468000" />
-      <workItem from="1686585017138" duration="1956000" />
-      <workItem from="1686587167134" duration="399000" />
-      <workItem from="1686587773424" duration="348000" />
+      <workItem from="1686566652954" duration="1312000" />
+      <workItem from="1686660174963" duration="290000" />
+      <workItem from="1686660754589" duration="1768000" />
     </task>
     <task id="LOCAL-00001" summary="codice per scaricare 1000 articoli per argomento, messaggio di errore se non viene scaricato nessun articolo">
       <created>1685527263138</created>
@@ -195,35 +188,7 @@
       <option name="project" value="LOCAL" />
       <updated>1686470823186</updated>
     </task>
-    <task id="LOCAL-00005" summary="TxtManager con la T maiuscola e risoluzione bug nel control">
-      <created>1686556237463</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1686556237463</updated>
-    </task>
-    <task id="LOCAL-00006" summary="aggiunta readme, file .jar, rimozione librerie non utlizzate">
-      <created>1686585091202</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1686585091202</updated>
-    </task>
-    <task id="LOCAL-00007" summary="aggiunta readme, file .jar, rimozione librerie non utlizzate">
-      <created>1686585140756</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1686585140756</updated>
-    </task>
-    <task id="LOCAL-00008" summary="nuovo jar">
-      <created>1686585722522</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1686585722522</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,16 +204,12 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="codice per scaricare 1000 articoli per argomento, messaggio di errore se non viene scaricato nessun articolo" />
     <MESSAGE value="aggiunta gestione apostrofo negli articoli e miglioramento bug grafica" />
     <MESSAGE value="Aggiunti commenti secondo javadoc" />
     <MESSAGE value="aggiunta documentazione casi d'uso" />
-    <MESSAGE value="TxtManager con la T maiuscola e risoluzione bug nel control" />
-    <MESSAGE value="aggiunta readme, file .jar, rimozione librerie non utlizzate" />
-    <MESSAGE value="nuovo jar" />
-    <option name="LAST_COMMIT_MESSAGE" value="nuovo jar" />
+    <option name="LAST_COMMIT_MESSAGE" value="aggiunta documentazione casi d'uso" />
   </component>
 </project>
